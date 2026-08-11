@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#4f8a1e"/>
+    <text x="50" y="60" font-size="48" font-weight="bold" fill="#fff" text-anchor="middle" font-family="sans-serif">LGO</text>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Regular.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Medium.woff2') format('woff2');font-weight:500;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Bold.woff2') format('woff2');font-weight:700;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Black.woff2') format('woff2');font-weight:800;font-display:swap}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Saprona',system-ui,sans-serif;color:#141414;background:#eef1f6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  a{color:#141414;text-decoration:none}
+  a:hover{color:#4f8a1e}
+  ::selection{background:#4f8a1e;color:#fff}
+  @keyframes sfmarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  [data-lang-btn]{border:0;padding:8px 12px;cursor:pointer;background:transparent;font-family:inherit;font-weight:800;font-size:13px;color:#5b6472;transition:background .15s,color .15s}
+  @media(max-width:1024px){[data-r="nav"]{display:none!important}[data-hide-sm]{display:none!important}[data-menu-btn]{display:flex!important}}
+  @media(max-width:960px){[data-r="hero"]{grid-template-columns:1fr!important}[data-r="three"]{grid-template-columns:1fr!important}[data-r="four"]{grid-template-columns:1fr 1fr!important}}
+  @media(max-width:760px){[data-r="two"]{grid-template-columns:1fr!important}[data-r="footer"]{grid-template-columns:1fr 1fr!important}[data-h1]{font-size:46px!important}[data-h2]{font-size:34px!important;line-height:1.06!important}}
+  @media(max-width:560px){[data-r="four"]{grid-template-columns:1fr!important}[data-r="footer"]{grid-template-columns:1fr!important}[data-h1]{font-size:38px!important}}
+  @media(max-width:700px){header{padding:10px 12px 0!important}[data-menu-panel]{max-height:70vh;overflow-y:auto;-webkit-overflow-scrolling:touch}}
+  [data-menu-panel] a{min-height:44px;display:flex;align-items:center}
+</style>
+<script src="senfay-common.js"></script>
+</helmet>
+<div style="background:#eef1f6">
+
+<!-- ============ HEADER ============ -->
+<header style="position:sticky;top:0;z-index:50;padding:16px 20px 0">
+  <div style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
+    <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+      <img src="assets/lgo-mark.png" alt="LGO" style="height:36px;width:auto;display:block"><span style="font-weight:800;font-size:28px;letter-spacing:.06em;color:#141414">LGO</span>
+      
+    </div>
+    <nav data-r="nav" style="display:flex;gap:30px;margin-left:20px">
+      <div data-dropdown style="position:relative">
+        <a href="#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span style="font-size:10px;color:#8a8574">▾</span></a>
+        <div data-dropdown-panel style="position:absolute;top:100%;left:0;padding-top:16px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s;pointer-events:none">
+          <div style="background:#fff;border:1px solid rgba(18,18,18,.06);border-radius:16px;box-shadow:0 16px 44px -20px rgba(18,18,18,.4);padding:8px;min-width:170px;display:flex;flex-direction:column;gap:2px">
+            <a href="https://lgo-youshop-4b1c31c5-youshop-pnqqhnama-kevinwekesa254s-projects.vercel.app" style="display:block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:15px">youShop</a>
+            <a href="https://lgo-youresto-4b1c31c5-youresto-1sub1o9k8.vercel.app" style="display:block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:15px">youResto</a>
+            <a href="https://lgo-youqr-4b1c31c5-youqr-qnrlxmxvu-kevinwekesa254s-projects.vercel.app" style="display:block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:15px">youQR</a>
+          </div>
+        </div>
+      </div>
+      <a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app" data-i18n="nav.hardware" style="font-weight:600;font-size:16px">Hardware</a>
+      <a href="Solutions.dc.html" style="font-weight:600;font-size:16px">Solutions</a>
+      <a href="#lending" data-i18n="nav.lending" style="font-weight:600;font-size:16px">Lending</a>
+      <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" data-i18n="nav.contact" style="font-weight:600;font-size:16px">Contact</a>
+    </nav>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <button type="button" data-menu-btn aria-label="Menu" style="display:none;border:1.5px solid #ccd4e2;background:transparent;border-radius:12px;width:44px;height:44px;cursor:pointer;font-size:20px;align-items:center;justify-content:center">☰</button>
+      <select data-lang-select aria-label="Language" style="border:1.5px solid #ccd4e2;border-radius:12px;padding:10px 30px 10px 12px;font-family:inherit;font-weight:800;font-size:13px;color:#141414;background:#fff;cursor:pointer"><option value="en">English</option><option value="sg">Singlish</option><option value="si">සිංහල</option><option value="ta">தமிழ්</option></select>
+      <a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#141414;color:#fff;border-radius:999px;padding:12px 22px;font-weight:700;font-size:15px;white-space:nowrap"><span data-i18n="btn.getFree">Get youShop free</span>&nbsp;&nbsp;→</a>
+    </div>
+  </div>
+  <nav data-menu-panel style="display:none;flex-direction:column;gap:2px;margin:10px 20px 0;padding:12px 22px;background:#fff;border-radius:18px;box-shadow:0 16px 44px -20px rgba(18,18,18,.4)">
+    <a href="#products" data-i18n="nav.products" style="font-weight:700;font-size:17px;padding:12px 0">Products</a>
+    <a href="https://lgo-youshop-4b1c31c5-youshop-pnqqhnama-kevinwekesa254s-projects.vercel.app" style="font-weight:600;font-size:15px;padding:8px 0 8px 14px;color:#5b6472">youShop</a>
+    <a href="https://lgo-youresto-4b1c31c5-youresto-1sub1o9k8.vercel.app" style="font-weight:600;font-size:15px;padding:8px 0 8px 14px;color:#5b6472">youResto</a>
+    <a href="https://lgo-youqr-4b1c31c5-youqr-qnrlxmxvu-kevinwekesa254s-projects.vercel.app" style="font-weight:600;font-size:15px;padding:8px 0 8px 14px;border-bottom:1px solid rgba(18,18,18,.06);color:#5b6472">youQR</a>
+    <a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app" data-i18n="nav.hardware" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Hardware</a>
+    <a href="Solutions.dc.html" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Solutions</a>
+    <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" data-i18n="nav.contact" style="font-weight:700;font-size:17px;padding:12px 0">Contact</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section data-r="hero" style="max-width:1280px;margin:0 auto;padding:70px 40px 20px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center">
+  <div>
+    <div style="display:flex;align-items:center;gap:11px;color:#4f8a1e;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span><span data-i18n="hero.eyebrow">Software &amp; credit for Sri Lanka's merchants</span>
+    </div>
+    <h1 data-i18n-html="hero.title" data-h1 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:62px;line-height:1.02;letter-spacing:-.01em;color:#141414;margin-bottom:30px">Run your shop. <span style="font-style:italic;color:#4f8a1e">Get paid.</span><br>Borrow to grow.</h1>
+    <p data-i18n="hero.sub" style="font-size:21px;line-height:1.5;color:#4c5666;max-width:560px;margin-bottom:38px">LGO is the free app in the pocket of thousands of Sri Lankan merchants — billing, inventory, LankaQR &amp; Visa acceptance, and working-capital credit from Sampath Bank when you're ready to grow.</p>
+    <div style="display:flex;gap:16px;margin-bottom:56px">
+      <a href="#products" style="background:#141414;color:#fff;border-radius:999px;padding:17px 30px;font-weight:700;font-size:17px"><span data-i18n="hero.explore">Explore the apps</span>&nbsp;&nbsp;→</a>
+    </div>
+    <div style="display:flex;gap:56px">
+      <div>
+        <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#141414">100+</div>
+        <div data-i18n="hero.stat1" style="font-size:13px;letter-spacing:.09em;color:#7c869a;text-transform:uppercase;margin-top:8px;font-weight:700">Active merchants</div>
+      </div>
+      <div>
+        <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#141414">5 rails</div>
+        <div style="font-size:13px;letter-spacing:.09em;color:#7c869a;text-transform:uppercase;margin-top:8px;font-weight:700">LankaQR · Visa · Mastercard · Amex · UnionPay</div>
+      </div>
+      <div>
+        <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#141414">250K</div>
+        <div data-i18n="hero.stat3" style="font-size:13px;letter-spacing:.09em;color:#7c869a;text-transform:uppercase;margin-top:8px;font-weight:700">Avg. working-capital loan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- phone mockup -->
+  <div style="position:relative;justify-self:center;width:392px;height:770px">
+    <div style="transform:scale(1.14);transform-origin:top center;filter:drop-shadow(0 40px 80px rgba(18,18,18,.45))"><dc-import name="PhoneScreen" hint-size="340px,720px"></dc-import></div>
+    <!-- floating cards -->
+    <div style="position:absolute;top:44px;left:-46px;background:#fff;border-radius:14px;padding:11px 15px;box-shadow:0 20px 40px -14px rgba(18,18,18,.28);display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;border-radius:9px;background:#eaf3dd;color:#4f8a1e;display:flex;align-items:center;justify-content:center;font-weight:700">₣</span><div><div style="font-size:13px;font-weight:800">Loan approved</div><div style="font-size:11px;color:#7c869a">250,000 LKR · Sampath Bank</div></div></div>
+    <div style="position:absolute;top:270px;right:-56px;background:#fff;border-radius:14px;padding:11px 15px;box-shadow:0 20px 40px -14px rgba(18,18,18,.28);display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;border-radius:9px;background:#e4f0ee;color:#3f8a7a;display:flex;align-items:center;justify-content:center;font-weight:700">Q</span><div><div style="font-size:13px;font-weight:800">Table 4 ordered</div><div style="font-size:11px;color:#7c869a">No app · scan &amp; pay</div></div></div>
+    <div style="position:absolute;bottom:70px;right:-44px;background:#fff;border-radius:14px;padding:11px 15px;box-shadow:0 20px 40px -14px rgba(18,18,18,.28);display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;border-radius:9px;background:#e4f0e8;color:#3f8a5f;display:flex;align-items:center;justify-content:center;font-weight:700">✓</span><div><div style="font-size:13px;font-weight:800">LankaQR payment</div><div style="font-size:11px;color:#7c869a">Settled in 3 seconds</div></div></div>
+  </div>
+</section>
+
+<!-- ============ LOGO STRIP (marquee) ============ -->
+<div style="border-top:1px solid rgba(18,18,18,.07);margin-top:24px;padding:30px 0">
+  <div data-pad style="max-width:1280px;margin:0 auto;padding:0 40px 18px;text-align:center">
+    <span data-i18n="strip.powered" style="font-size:13px;letter-spacing:.14em;font-weight:800;color:#7c869a;text-transform:uppercase">Payments &amp; credit powered by</span>
+  </div>
+  <div style="position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
+    <div style="display:flex;width:max-content;gap:22px;animation:sfmarquee 40s linear infinite">
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-lankaqr.png" alt="LankaQR" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-visa.png" alt="Visa" style="max-height:48px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-mastercard.png" alt="Mastercard" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-amex.png" alt="American Express" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-unionpay.png" alt="UnionPay" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-lankaqr.png" alt="LankaQR" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-visa.png" alt="Visa" style="max-height:48px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-mastercard.png" alt="Mastercard" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-amex.png" alt="American Express" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+      <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-unionpay.png" alt="UnionPay" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRODUCT LINE ============ -->
+<section id="products" style="max-width:1280px;margin:0 auto;padding:96px 40px 40px">
+  <div style="display:flex;align-items:center;gap:11px;color:#4f8a1e;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px"><span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span><span data-i18n="pl.eyebrow">The product line</span></div>
+  <h2 data-i18n-html="pl.title" data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:50px;line-height:1.02;letter-spacing:-.01em;margin-bottom:26px">One free app, then <span style="font-style:italic;color:#4f8a1e">whatever you need</span><br>to grow.</h2>
+  <p data-i18n-html="pl.intro" style="font-size:21px;line-height:1.5;color:#4c5666;max-width:640px;margin-bottom:56px">Every LGO product runs on the phone that's already in your pocket. Start free with youShop, add youResto if you serve food, hand out youQR codes when you're ready — and unlock credit as your sales history grows.</p>
+
+  <div data-r="two" style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:26px;padding:44px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center">
+    <div>
+      <span style="display:inline-block;background:#eaf3dd;color:#4f8a1e;font-size:12px;font-weight:800;letter-spacing:.09em;padding:8px 14px;border-radius:999px">FREEMIUM · STARTER PACK</span>
+      <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:36px;line-height:1.05;margin:20px 0 16px">The free starter pack that turns any phone into a till.</h3>
+      <p style="font-size:18px;line-height:1.5;color:#4c5666;margin-bottom:26px">Sign up in minutes and start taking LankaQR &amp; card payments, ringing sales and tracking stock — LKR 0 forever, no card required. Everything a micro-merchant needs to go digital on day one.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;margin-bottom:30px">
+        <div style="display:flex;gap:10px;font-size:17px;font-weight:600"><span style="color:#4f8a1e">◆</span>LankaQR &amp; card acceptance</div>
+        <div style="display:flex;gap:10px;font-size:17px;font-weight:600"><span style="color:#4f8a1e">◆</span>Billing &amp; digital receipts</div>
+        <div style="display:flex;gap:10px;font-size:17px;font-weight:600"><span style="color:#4f8a1e">◆</span>Inventory &amp; low-stock alerts</div>
+        <div style="display:flex;gap:10px;font-size:17px;font-weight:600"><span style="color:#4f8a1e">◆</span>Loyalty stamps &amp; simple books</div>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#4f8a1e;color:#fff;border-radius:999px;padding:15px 28px;font-weight:800;font-size:16px">Start free&nbsp;&nbsp;→</a>
+        <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="border:1.5px solid #ccd4e2;background:#fff;border-radius:999px;padding:15px 26px;font-weight:700;font-size:16px">Book a demo</a>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <div style="font-size:12px;letter-spacing:.08em;font-weight:700;color:#a29c8b;padding-bottom:8px;border-bottom:1px solid #eee">TICKET · #1042</div>
+        <div style="display:flex;justify-content:space-between;font-size:15px;padding:8px 0"><span>Plain tea</span><b>120</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:15px;padding:8px 0"><span>Egg roti</span><b>200</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:15px;padding:8px 0"><span>Faluda × 2</span><b>900</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:15px;padding:8px 0"><span>Rice &amp; curry</span><b>580</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;padding:9px 12px;margin-top:6px;background:#141414;color:#fff;border-radius:10px"><span>Total</span><b>1,800 LKR</b></div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.08em;font-weight:700;color:#a29c8b">ENTER AMOUNT</div>
+        <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:34px;margin:4px 0 10px">1,800</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
+          <span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">1</span><span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">2</span><span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">3</span>
+          <span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">4</span><span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">5</span><span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">6</span>
+          <span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">7</span><span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">8</span><span style="background:#f6f8fc;border-radius:8px;text-align:center;padding:9px 0;font-weight:700">9</span>
+        </div>
+        <div style="margin-top:8px;background:#4f8a1e;color:#fff;border-radius:10px;text-align:center;padding:11px 0;font-weight:700">Charge · LankaQR</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- youQR -->
+  <div id="lending-x" style="background:#141414;border-radius:26px;padding:52px;margin-top:28px;color:#fff">
+    <span style="display:block;width:fit-content;background:rgba(255,255,255,.1);color:#fff;font-size:12px;font-weight:800;letter-spacing:.09em;padding:8px 16px;border-radius:999px">APP-LESS COMMERCE</span>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:22px 0 20px;flex-wrap:wrap"><img src="assets/logo-youqr-white.png" alt="youQR" style="height:60px;width:auto;display:block"><a href="https://lgo-youqr-4b1c31c5-youqr-qnrlxmxvu-kevinwekesa254s-projects.vercel.app" style="background:#8fb51f;color:#141414;border-radius:999px;padding:11px 22px;font-weight:800;font-size:14px;white-space:nowrap"><span data-i18n="cmn.learnMore">Learn more</span>&nbsp;→</a></div>
+    <h3 data-i18n-html="pl.qrTitle" data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:42px;line-height:1.05;margin-bottom:18px">Customers order and pay in under a minute. <span style="font-style:italic;color:#8fb51f">No download.</span></h3>
+    <p style="font-size:19px;line-height:1.5;color:rgba(255,255,255,.6);max-width:720px;margin-bottom:36px">Print a code, stick it on the table or the shop window. Customers scan with any camera, browse your menu, pay by LankaQR or Visa, and earn loyalty — all in the mobile browser.</p>
+    <div data-r="two" style="display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center">
+      <div style="border-radius:20px;overflow:hidden;aspect-ratio:1/1"><img src="assets/photo-youqr-scan.png" alt="Customer scanning a youQR code to order at a restaurant table" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div>
+        <div style="display:flex;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="width:30px;height:30px;flex-shrink:0;border-radius:50%;background:#8fb51f;color:#141414;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px">1</span><div style="font-size:18px"><b>Customer scans</b> <span style="color:rgba(255,255,255,.62)">with the phone camera — no app install</span></div></div>
+        <div style="display:flex;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="width:30px;height:30px;flex-shrink:0;border-radius:50%;background:#8fb51f;color:#141414;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px">2</span><div style="font-size:18px"><b>Browses the menu</b> <span style="color:rgba(255,255,255,.62)">with photos, allergens and variants</span></div></div>
+        <div style="display:flex;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="width:30px;height:30px;flex-shrink:0;border-radius:50%;background:#8fb51f;color:#141414;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px">3</span><div style="font-size:18px"><b>Pays</b> <span style="color:rgba(255,255,255,.62)">with LankaQR, Visa or card</span></div></div>
+        <div style="display:flex;gap:16px;align-items:center;padding:18px 0"><span style="width:30px;height:30px;flex-shrink:0;border-radius:50%;background:#8fb51f;color:#141414;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px">4</span><div style="font-size:18px"><b>Earns loyalty</b> <span style="color:rgba(255,255,255,.62)">automatically; ticket prints in the kitchen</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- working capital -->
+  <div id="lending" style="background:#141414;border-radius:26px;padding:52px;margin-top:28px;color:#fff">
+    <span style="display:inline-block;background:rgba(143,181,31,.16);color:#8fb51f;font-size:12px;font-weight:800;letter-spacing:.09em;padding:8px 16px;border-radius:999px">COMMERCIAL BANK LENDING</span>
+    <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:40px;line-height:1.05;margin:22px 0 18px">Working capital, <span style="font-style:italic;color:#8fb51f">underwritten by your sales.</span></h3>
+    <p style="font-size:19px;line-height:1.5;color:rgba(255,255,255,.6);max-width:720px;margin-bottom:36px">Every sale you ring up on youShop builds a real financial history. Once you qualify, Sampath Bank pre-approves a working-capital loan — settled straight into your LankaQR or Visa account.</p>
+    <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:34px">
+      <div style="background:#242424;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px">
+        <div style="font-size:12px;letter-spacing:.09em;font-weight:700;color:rgba(255,255,255,.5)">PRE-APPROVED OFFER</div>
+        <div style="display:flex;align-items:baseline;gap:10px;margin:8px 0 20px"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:46px">250,000</span><span style="color:rgba(255,255,255,.55)">LKR</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12)">
+          <div><div style="font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.5)">TERM</div><div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px;margin-top:4px">90 days</div></div>
+          <div><div style="font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.5)">FEE</div><div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px;margin-top:4px">3.5% flat</div></div>
+          <div style="text-align:right"><div style="font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.5)">PAYOUT</div><div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px;margin-top:4px">Same day</div></div>
+        </div>
+      </div>
+      <div>
+        <span style="display:inline-block;border:1px solid rgba(143,181,31,.5);color:#8fb51f;font-size:12px;font-weight:800;letter-spacing:.08em;padding:7px 14px;border-radius:999px;margin-bottom:22px">UNDERWRITTEN BY ECOBANK</span>
+        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font-size:15px;margin-bottom:8px"><span style="color:rgba(255,255,255,.75)">Credit score built</span><b>84 / 100</b></div><div style="height:6px;background:rgba(255,255,255,.12);border-radius:3px"><div style="width:84%;height:100%;background:#8fb51f;border-radius:3px"></div></div></div>
+        <div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font-size:15px;margin-bottom:8px"><span style="color:rgba(255,255,255,.75)">Repaid on time</span><b>4 of 4 loans</b></div><div style="height:6px;background:rgba(255,255,255,.12);border-radius:3px"><div style="width:100%;height:100%;background:#8fb51f;border-radius:3px"></div></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:15px"><span style="color:rgba(255,255,255,.75)">Next tier unlocks at</span><b>300,000 LKR</b></div>
+      </div>
+    </div>
+    <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:12px 40px">
+      <div style="display:flex;gap:10px;font-size:16px;color:rgba(255,255,255,.72)"><span style="color:#4f8a1e">◆</span>Average loan: 250,000 LKR</div>
+      <div style="display:flex;gap:10px;font-size:16px;color:rgba(255,255,255,.72)"><span style="color:#4f8a1e">◆</span>Taken twice per year on average</div>
+      <div style="display:flex;gap:10px;font-size:16px;color:rgba(255,255,255,.72)"><span style="color:#4f8a1e">◆</span>Repaid automatically from daily sales</div>
+      <div style="display:flex;gap:10px;font-size:16px;color:rgba(255,255,255,.72)"><span style="color:#4f8a1e">◆</span>No paperwork — history is your collateral</div>
+      <div style="display:flex;gap:10px;font-size:16px;color:rgba(255,255,255,.72)"><span style="color:#4f8a1e">◆</span>Tier up as your business grows</div>
+      <div style="display:flex;gap:10px;font-size:16px;color:rgba(255,255,255,.72)"><span style="color:#4f8a1e">◆</span>Payout to LankaQR or Visa</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HARDWARE ============ -->
+<section id="hardware" style="background:#efe9da;padding:90px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 40px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;gap:40px;flex-wrap:wrap">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;color:#4f8a1e;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:24px"><span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span><span data-i18n="hw.eyebrow">Optional hardware</span></div>
+        <h2 data-i18n-html="hw.title" data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:46px;line-height:1;letter-spacing:-.01em;margin-bottom:22px">Everything runs on your phone.<br><span style="font-style:italic;color:#4f8a1e">Hardware is a choice.</span></h2>
+        <p data-i18n="hw.intro" style="font-size:20px;line-height:1.5;color:#4c5666;max-width:560px">Prefer a dedicated device, or need to print receipts and kitchen tickets? Add LGO hardware — sold at cost-plus, paired in seconds.</p>
+      </div>
+      <a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app" style="border:1.5px solid #ccd4e2;background:#fff;border-radius:999px;padding:15px 26px;font-weight:700;font-size:16px;white-space:nowrap"><span data-i18n="hw.shop">Shop hardware</span>&nbsp;&nbsp;→</a>
+    </div>
+    <div data-r="four" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <div style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:22px;overflow:hidden">
+        <div style="height:220px;background:#fff;display:flex;align-items:center;justify-content:center;padding:18px"><img src="assets/hw-y10.png" alt="Y10" style="max-height:100%;max-width:100%;object-fit:contain"></div>
+        <div style="padding:26px 24px 24px">
+          <div style="font-size:12px;font-weight:800;letter-spacing:.09em;color:#4f8a1e;margin-bottom:8px">QR &amp; AUDIO CONFIRMATION</div>
+          <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:26px;margin-bottom:12px">Y10</div>
+          <p style="font-size:15px;line-height:1.5;color:#5b6472;margin-bottom:22px">Desktop QR display that announces every LankaQR or Visa payment out loud, in Sinhala or Tamil. Perfect for busy counters.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">18,500 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app" data-i18n="hw.details" style="border:1.5px solid #ccd4e2;border-radius:999px;padding:9px 18px;font-weight:700;font-size:14px">Details</a></div>
+        </div>
+      </div>
+      <div style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:22px;overflow:hidden">
+        <div style="height:220px;background:#fff;display:flex;align-items:center;justify-content:center;padding:18px"><img src="assets/hw-receipt.png" alt="Receipt 58 printer" style="max-height:100%;max-width:100%;object-fit:contain"></div>
+        <div style="padding:26px 24px 24px">
+          <div style="font-size:12px;font-weight:800;letter-spacing:.09em;color:#4f8a1e;margin-bottom:8px">BLUETOOTH PRINTER</div>
+          <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:26px;margin-bottom:12px">Receipt 58</div>
+          <p style="font-size:15px;line-height:1.5;color:#5b6472;margin-bottom:22px">58 mm Bluetooth thermal printer. Pairs to youShop in one tap, prints crisp receipts and daily Z-reports.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">22,000 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app" data-i18n="hw.details" style="border:1.5px solid #ccd4e2;border-radius:999px;padding:9px 18px;font-weight:700;font-size:14px">Details</a></div>
+        </div>
+      </div>
+      <div style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:22px;overflow:hidden;position:relative">
+        <span data-i18n="hw.comingSoon" style="position:absolute;top:16px;left:16px;z-index:2;background:#141414;color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em;padding:6px 12px;border-radius:999px">Coming soon</span>
+        <div style="height:220px;background:#fff;display:flex;align-items:center;justify-content:center;padding:18px"><img src="assets/hw-kds.png" alt="Kitchen Display System" style="max-height:65%;max-width:65%;object-fit:contain;opacity:.92"></div>
+        <div style="padding:26px 24px 24px">
+          <div style="font-size:12px;font-weight:800;letter-spacing:.09em;color:#4f8a1e;margin-bottom:8px">KITCHEN DISPLAY SYSTEM</div>
+          <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:26px;margin-bottom:12px">KDS Tablet</div>
+          <p style="font-size:15px;line-height:1.5;color:#5b6472;margin-bottom:22px">Wall-mounted kitchen display for youResto and youQR. Orders appear the second they land — no more shouting across the kitchen.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between"><span data-i18n="hw.comingSoon" style="font-family:'Saprona',sans-serif;font-weight:800;font-size:20px;color:#7c869a">Coming soon</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MERCHANT JOURNEY ============ -->
+<section id="how" style="background:#141414;padding:90px 0;color:#fff">
+  <div style="max-width:1280px;margin:0 auto;padding:0 40px">
+    <div style="display:flex;align-items:center;gap:11px;color:#8fb51f;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:24px"><span style="width:9px;height:9px;border-radius:50%;background:#8fb51f"></span><span data-i18n="mj.eyebrow">Merchant journey</span></div>
+    <h2 data-i18n-html="mj.title" data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:46px;line-height:1;letter-spacing:-.01em;margin-bottom:20px">From <span style="font-style:italic;color:#8fb51f">cash-and-memory</span> to credit-<br>ready, in four steps.</h2>
+    <p data-i18n="mj.intro" style="font-size:20px;line-height:1.5;color:rgba(255,255,255,.6);max-width:640px;margin-bottom:56px">The whole point is that you don't have to change how you run your shop. You just start ringing sales through LGO — the credit follows.</p>
+    <div data-r="four" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+      <div style="background:#242424;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:30px 28px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:34px"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:52px;color:#8fb51f;line-height:1">01</span><span style="font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.4);font-weight:700;margin-top:8px">DAY 1</span></div>
+        <h4 style="font-size:22px;font-weight:800;margin-bottom:14px">Download &amp; onboard</h4>
+        <p style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.6)">Install youShop from the Play Store, or an agent walks you through it. Under five minutes to your first sale.</p>
+      </div>
+      <div style="background:#242424;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:30px 28px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:34px"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:52px;color:#8fb51f;line-height:1">02</span><span style="font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.4);font-weight:700;margin-top:8px">WEEK 1</span></div>
+        <h4 style="font-size:22px;font-weight:800;margin-bottom:14px">Ring &amp; get paid</h4>
+        <p style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.6)">Every sale you take — LankaQR, Orange, cash — flows through LGO. Receipts print via Bluetooth if you have the printer.</p>
+      </div>
+      <div style="background:#242424;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:30px 28px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:34px"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:52px;color:#8fb51f;line-height:1">03</span><span style="font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.4);font-weight:700;margin-top:8px">MONTH 2</span></div>
+        <h4 style="font-size:22px;font-weight:800;margin-bottom:14px">Build a history</h4>
+        <p style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.6)">Your digitised sales become a real financial history. Sampath Bank's model scores you in the background — no forms.</p>
+      </div>
+      <div style="background:#242424;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:30px 28px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:34px"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:52px;color:#8fb51f;line-height:1">04</span><span style="font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.4);font-weight:700;margin-top:8px">MONTH 3+</span></div>
+        <h4 style="font-size:22px;font-weight:800;margin-bottom:14px">Unlock credit</h4>
+        <p style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.6)">A pre-approved loan offer appears in-app. Accept in one tap. Cash lands in your LankaQR account the same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ SUPPORT ============ -->
+<section id="support" style="background:#efe9da;padding:90px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 40px">
+    <div style="display:flex;align-items:center;gap:11px;color:#4f8a1e;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:24px"><span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span><span data-i18n="sp.eyebrow">Merchant support</span></div>
+    <h2 data-i18n-html="sp.title" data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:46px;line-height:1;letter-spacing:-.01em;margin-bottom:22px">Help you can <span style="font-style:italic;color:#4f8a1e">walk to.</span></h2>
+    <p data-i18n="sp.intro" style="font-size:20px;line-height:1.5;color:#4c5666;max-width:620px;margin-bottom:52px">A merchant agent is never far away. Search FAQs, find the nearest LGO agent, or switch the app to the language you speak at the till.</p>
+    <div data-r="three" style="display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:start">
+      <!-- help centre -->
+      <div style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:24px;padding:32px">
+        <span data-i18n="sp.help" style="display:inline-block;background:#eaf3dd;color:#4f8a1e;font-size:12px;font-weight:800;letter-spacing:.08em;padding:7px 14px;border-radius:999px;margin-bottom:20px">HELP CENTRE</span>
+        <h3 data-i18n="sp.helpTitle" style="font-family:'Saprona',sans-serif;font-weight:800;font-size:30px;margin-bottom:20px">Answers, in your language</h3>
+        <div style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e0e5ee;border-radius:14px;padding:12px 16px;margin-bottom:22px"><span style="color:#7c869a">⌕</span><input data-help-search data-i18n-ph="sp.searchPh" placeholder='Search — e.g. "refund a LankaQR payment"' style="border:0;outline:0;background:transparent;font-family:inherit;font-size:15px;color:#141414;flex:1"></div>
+        <div data-help-list style="display:flex;flex-direction:column;gap:12px"></div>
+        <div style="display:flex;gap:12px;margin-top:22px;flex-wrap:wrap"><a href="tel:+94772017950" data-i18n="sp.call" style="border:1.5px solid #ccd4e2;border-radius:999px;padding:11px 20px;font-weight:700;font-size:15px">Call +94772017950</a><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" data-i18n="sp.whatsappSupport" style="border:1.5px solid #ccd4e2;border-radius:999px;padding:11px 20px;font-weight:700;font-size:15px">Talk to sales</a></div>
+      </div>
+      <!-- languages -->
+      <div style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:24px;padding:32px">
+        <span data-i18n="sp.langs" style="display:inline-block;background:#eaf3dd;color:#4f8a1e;font-size:12px;font-weight:800;letter-spacing:.08em;padding:7px 14px;border-radius:999px;margin-bottom:20px">LANGUAGES</span>
+        <h3 data-i18n="sp.langsTitle" style="font-family:'Saprona',sans-serif;font-weight:800;font-size:30px;line-height:1.1;margin-bottom:18px">Serve customers in the language they speak</h3>
+        <p data-i18n="sp.langsIntro" style="font-size:16px;line-height:1.5;color:#5b6472;margin-bottom:24px">The LGO apps, receipts and SoundBox voice prompts switch between English, Sinhala and Tamil — English is the default, with Singlish for the cashier till.</p>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;gap:14px;background:#141414;border-radius:14px;padding:16px;color:#fff"><span style="width:34px;height:24px;border-radius:4px;background:#4f8a1e"></span><div style="flex:1"><b style="font-size:16px">English</b><div style="font-size:13px;color:rgba(255,255,255,.6)">Default · full coverage</div></div><span style="width:8px;height:8px;border-radius:50%;background:#8fb51f"></span></div>
+          <div style="display:flex;align-items:center;gap:14px;border:1px solid #e0e5ee;border-radius:14px;padding:16px"><span style="width:34px;height:24px;border-radius:4px;background:linear-gradient(90deg,#3f8a5f 33%,#8fb51f 33% 66%,#4f8a1e 66%)"></span><div style="flex:1"><b style="font-size:16px">Sinhala</b><div style="font-size:13px;color:#7c869a">App, receipts &amp; SoundBox voice</div></div></div>
+          <div style="display:flex;align-items:center;gap:14px;border:1px solid #e0e5ee;border-radius:14px;padding:16px"><span style="width:34px;height:24px;border-radius:4px;background:linear-gradient(180deg,#3757b3 50%,#c23b3b 50%)"></span><div style="flex:1"><b style="font-size:16px">Tamil</b><div style="font-size:13px;color:#7c869a">App &amp; receipts</div></div></div>
+          <div style="display:flex;align-items:center;gap:14px;border:1px solid #e0e5ee;border-radius:14px;padding:16px"><span style="width:34px;height:24px;border-radius:4px;background:linear-gradient(180deg,#3f8a5f 33%,#8fb51f 33% 66%,#4f8a1e 66%)"></span><div style="flex:1"><b style="font-size:16px">Singlish</b><div style="font-size:13px;color:#7c869a">Cashier-friendly English</div></div></div>
+        </div>
+        <div style="background:#141414;border-radius:16px;padding:20px;margin-top:20px;color:#fff">
+          <div style="font-size:11px;letter-spacing:.09em;color:rgba(255,255,255,.5);font-weight:700;margin-bottom:8px">SOUNDBOX VOICE PREVIEW</div>
+          <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:20px;line-height:1.3">LankaQR payment received — two thousand five hundred rupees</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA + FOOTER ============ -->
+<section style="padding:70px 40px 0;background:#efe9da">
+  <div style="max-width:1280px;margin:0 auto;background:#141414;border-radius:28px;padding:60px;color:#fff;position:relative;overflow:hidden">
+    <div style="position:absolute;top:-40px;right:-20px;width:360px;height:360px;background:radial-gradient(circle,rgba(143,181,31,.18),transparent 70%)"></div>
+    <div data-r="hero" style="display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;color:#8fb51f;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px"><span style="width:9px;height:9px;border-radius:50%;background:#8fb51f"></span><span data-i18n="cta.eyebrow">Ready when you are</span></div>
+        <h2 data-i18n-html="cta.title" data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:44px;line-height:1.04;margin-bottom:22px">Your next sale can go through LGO <span style="font-style:italic;color:#8fb51f">today.</span></h2>
+        <p data-i18n="cta.sub" style="font-size:19px;line-height:1.5;color:rgba(255,255,255,.6);max-width:520px">Download youShop from the Play Store, or call a merchant agent — most shops are up and running in under five minutes.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+        <a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#8fb51f;color:#141414;border-radius:999px;padding:16px 30px;font-weight:800;font-size:17px"><span data-i18n="cta.download">Download youShop</span>&nbsp;&nbsp;→</a>
+        <a href="tel:+94772017950" data-i18n="cta.callAgent" style="border:1.5px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:15px 30px;font-weight:700;font-size:17px">Call +94772017950</a>
+        <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" data-i18n="cta.waAgent" style="border:1.5px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:15px 30px;font-weight:700;font-size:17px">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#f7f3ea;padding:64px 40px 40px">
+  <div data-r="footer" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px">
+    <div>
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:20px"><img src="assets/lgo-logo-full.png" alt="LGO Paytech" style="height:90px;width:auto;display:block"></div>
+      <p data-i18n="ft.desc" style="font-size:16px;line-height:1.55;color:#5b6472;max-width:340px;margin-bottom:20px">Software and credit for Sri Lanka's micro-merchants. Built in Colombo by LGO Paytech, in partnership with LankaPay and Sampath Bank.</p>
+      <div style="font-size:15px;color:#5b6472;line-height:1.9;margin-bottom:20px"><a href="mailto:connect@lgotech.lk" style="font-weight:700">connect@lgotech.lk</a><br><a href="tel:+94772017950" style="font-weight:700">(+94) 77 201 7950</a></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Talk to sales</a></div>
+    </div>
+    <div>
+      <div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Products</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="https://lgo-youshop-4b1c31c5-youshop-pnqqhnama-kevinwekesa254s-projects.vercel.app">youShop</a><a href="https://lgo-youresto-4b1c31c5-youresto-1sub1o9k8.vercel.app">youResto</a><a href="https://lgo-youqr-4b1c31c5-youqr-qnrlxmxvu-kevinwekesa254s-projects.vercel.app">youQR</a><a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app">Hardware</a></div>
+    </div>
+    <div>
+      <div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Merchants</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="#how">How it works</a><a href="#support">Help centre</a><a href="#support">Sinhala · Tamil</a></div>
+    </div>
+    <div>
+      <div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Company</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app">Contact</a><a href="https://lgo-terms-4b1c31c5-terms-c0gmt6icz-kevinwekesa254s-projects.vercel.app">Terms of use</a><a href="https://lgo-privacy-4b1c31c5-privacy-cagkszq6c-kevinwekesa254s-projects.vercel.app">Privacy policy</a></div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:44px auto 0;padding-top:26px;border-top:1px solid rgba(18,18,18,.1);font-size:15px;color:#7c869a;line-height:1.6">© 2026 <b style="color:#5b6472">LGO</b> — operated by LGO, Sri Lanka. Payments by LankaPay (CBSL-licensed). Credit by Sampath Bank.<br>Colombo · <a href="https://lgo-terms-4b1c31c5-terms-c0gmt6icz-kevinwekesa254s-projects.vercel.app" style="color:#7c869a;text-decoration:underline">Terms of use</a> · Confidentiality</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this;
+    var tryInit = function () {
+      if (window.LGO) { window.LGO.init(document); }
+      else setTimeout(tryInit, 60);
+    };
+    tryInit();
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
