@@ -10,7 +10,7 @@ scripts and images directly from disk. Open any `.dc.html` file in a browser to 
 
 | File | Page |
 | --- | --- |
-| `Senfay Home.dc.html` | Home |
+| `index.html` | Home (site root) |
 | `Solutions.dc.html` | Solutions / industries |
 | `YouShop.dc.html` | youShop product page |
 | `YouResto.dc.html` | youResto product page |
@@ -66,5 +66,12 @@ Some pages fetch sibling files, so open them over HTTP rather than `file://`:
 
 ```sh
 python3 -m http.server 8000
-# then visit http://localhost:8000/Senfay%20Home.dc.html
+# then visit http://localhost:8000/
 ```
+
+## Deployment
+
+The whole folder deploys as one static Vercel project — no build command, no output
+directory. `index.html` is the site root; every other page is served at its own path
+(`/YouShop.dc.html`, `/Hardware.dc.html`, …) and the relative links between them resolve
+as-is.
