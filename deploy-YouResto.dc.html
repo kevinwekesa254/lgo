@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
 <style>
   @font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Regular.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Medium.woff2') format('woff2');font-weight:500;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Bold.woff2') format('woff2');font-weight:700;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Black.woff2') format('woff2');font-weight:800;font-display:swap}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -35,11 +36,11 @@
 <div style="background:#f4efe4">
 
 <header style="position:sticky;top:0;z-index:50;padding:16px 20px 0">
-  <div style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
+  <div data-gut style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
     <a href="https://lgo-2026-senfay-home-4b1c31c5-d8ff-4e71-8f52-f28f766-7avoqbzmz.vercel.app" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="assets/lgo-mark.png" alt="LGO" style="height:36px;width:auto;display:block"><span style="font-weight:800;font-size:28px;letter-spacing:.06em;color:#141414">LGO</span></a>
     <nav data-r="nav" style="display:flex;gap:30px;margin-left:20px">
       <div data-dropdown style="position:relative">
-        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span style="font-size:10px;color:#8a8574">▾</span></a>
+        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span data-micro style="font-size:10px;color:#8a8574">▾</span></a>
         <div data-dropdown-panel style="position:absolute;top:100%;left:0;padding-top:16px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s;pointer-events:none">
           <div style="background:#fff;border:1px solid rgba(18,18,18,.06);border-radius:16px;box-shadow:0 16px 44px -20px rgba(18,18,18,.4);padding:8px;min-width:170px;display:flex;flex-direction:column;gap:2px">
             <a href="https://lgo-youshop-4b1c31c5-youshop-pnqqhnama-kevinwekesa254s-projects.vercel.app" style="display:block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:15px">youShop</a>
@@ -69,17 +70,22 @@
     <a href="Solutions.dc.html" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Solutions</a>
     <a href="index.html#pricing" data-i18n="nav.pricing" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Pricing</a>
     <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" data-i18n="nav.contact" style="font-weight:700;font-size:17px;padding:12px 0">Contact</a>
+  
+    <div data-menu-extra>
+      <a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener"><span data-i18n="btn.getFree">Get youShop free</span>&nbsp;&nbsp;→</a>
+      <select data-lang-select aria-label="Language"><option value="en">English</option><option value="sg">Singlish</option><option value="si">සිංහල</option><option value="ta">தமிழ්</option></select>
+    </div>
   </nav>
 </header>
 
 <!-- HERO -->
-<section data-r="hero" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+<section data-stack data-gut data-sec data-r="hero" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
   <div>
     <a href="https://lgo-2026-senfay-home-4b1c31c5-d8ff-4e71-8f52-f28f766-7avoqbzmz.vercel.app" data-i18n="back.home" style="font-size:14px;font-weight:700;color:#7c869a;display:inline-block;margin-bottom:22px">← Back to home</a>
     <img src="assets/logo-youresto.png" alt="youResto" style="height:57px;width:auto;display:block;margin-bottom:18px">
     <h1 data-i18n-html="yr.title" data-h1 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:50px;line-height:1.05;letter-spacing:-.01em;margin-bottom:22px">The complete <span style="font-style:italic;color:#4f8a1e">restaurant</span><br>management system.</h1>
     <p data-i18n="yr.sub" style="font-size:19px;line-height:1.55;color:#4c5666;max-width:480px;margin-bottom:32px">youResto helps hotels, cafes and restaurants compete with global chains — menu management, table &amp; ticket ordering, QR menus, delivery intake, accounting and loyalty, all from one dashboard.</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <div data-btnrow style="display:flex;gap:14px;flex-wrap:wrap">
       <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" data-i18n="cmn.talkSales" style="background:#141414;color:#fff;border-radius:999px;padding:15px 26px;font-weight:700;font-size:16px">Talk to sales</a>
     </div>
   </div>
@@ -89,24 +95,24 @@
 </section>
 
 <!-- 2x2 CARDS -->
-<section style="max-width:1240px;margin:0 auto;padding:20px 40px 40px">
-  <div data-r="cards" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-    <div style="background:#14243d;color:#fff;border-radius:20px;padding:32px">
+<section data-gut data-sec style="max-width:1240px;margin:0 auto;padding:20px 40px 40px">
+  <div data-stack data-r="cards" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div data-card style="background:#14243d;color:#fff;border-radius:20px;padding:32px">
       <div style="font-size:12px;font-weight:800;letter-spacing:.1em;color:#8fb51f;text-transform:uppercase;margin-bottom:12px">Unified restaurant platform</div>
       <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:26px;line-height:1.15;margin-bottom:12px">Front of house to kitchen, one system</h3>
       <p style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.68);margin:0">Ordering, KDS, table management, payments, delivery and accounting are connected end to end — one source of truth for every outlet.</p>
     </div>
-    <div style="background:#faf7f0;border:1px solid #e7ddc8;border-radius:20px;padding:32px">
+    <div data-card style="background:#faf7f0;border:1px solid #e7ddc8;border-radius:20px;padding:32px">
       <div style="font-size:12px;font-weight:800;letter-spacing:.1em;color:#4f8a1e;text-transform:uppercase;margin-bottom:12px">Live kitchen flow</div>
       <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:26px;line-height:1.15;margin-bottom:12px">Tickets that never get lost</h3>
       <p style="font-size:15.5px;line-height:1.55;color:#5b6472;margin:0">Orders route to the right station with prep timing, course firing and printer routing, so the pass keeps moving even on a full house.</p>
     </div>
-    <div style="background:#faf7f0;border:1px solid #e7ddc8;border-radius:20px;padding:32px">
+    <div data-card style="background:#faf7f0;border:1px solid #e7ddc8;border-radius:20px;padding:32px">
       <div style="font-size:12px;font-weight:800;letter-spacing:.1em;color:#4f8a1e;text-transform:uppercase;margin-bottom:12px">Table &amp; delivery</div>
       <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:26px;line-height:1.15;margin-bottom:12px">Every channel on one screen</h3>
       <p style="font-size:15.5px;line-height:1.55;color:#5b6472;margin:0">Dine-in, QR self-order and aggregator delivery orders sit in a single queue with split and merged bills and reservation management.</p>
     </div>
-    <div style="background:#faf7f0;border:1px solid #e7ddc8;border-radius:20px;padding:32px">
+    <div data-card style="background:#faf7f0;border:1px solid #e7ddc8;border-radius:20px;padding:32px">
       <div style="font-size:12px;font-weight:800;letter-spacing:.1em;color:#4f8a1e;text-transform:uppercase;margin-bottom:12px">Offline billing</div>
       <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:26px;line-height:1.15;margin-bottom:12px">Service continues offline</h3>
       <p style="font-size:15.5px;line-height:1.55;color:#5b6472;margin:0">Take orders and settle bills without internet — tickets, KOTs and payments are stored on the device and reconcile automatically when you reconnect.</p>
@@ -115,26 +121,26 @@
 </section>
 
 <!-- COMPARE PLANS -->
-<section style="max-width:1240px;margin:0 auto;padding:40px 40px 20px">
+<section data-gut data-sec style="max-width:1240px;margin:0 auto;padding:40px 40px 20px">
   <div style="display:flex;align-items:center;gap:11px;color:#4f8a1e;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px"><span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span>Compare plans</div>
   <h2 data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:38px;line-height:1.06;letter-spacing:-.01em;margin-bottom:14px">Freemium to Starter — feature by feature.</h2>
   <p style="font-size:18px;line-height:1.5;color:#4c5666;max-width:680px;margin-bottom:26px">Every youResto tier builds on the one before it. Here is exactly what unlocks as you grow from a single outlet to a busier floor.</p>
   <div style="background:#eef1f8;border:1px solid #d8e0ee;border-radius:12px;padding:12px 18px;font-size:14px;color:#3a4457;margin-bottom:24px"><b>Legend</b>&nbsp; ✓ Included &nbsp;·&nbsp; — Not included &nbsp;·&nbsp; Text = feature scope at that tier</div>
 
-  <div style="overflow-x:auto;border-radius:16px;border:1px solid #e7ddc8;background:#fff">
+  <div data-tablewrap style="overflow-x:auto;border-radius:16px;border:1px solid #e7ddc8;background:#fff">
   <table style="width:100%;min-width:640px;font-size:14.5px">
     <thead>
       <tr style="background:#14243d;color:#fff">
         <th style="position:sticky;left:0;z-index:2;background:#14243d;text-align:left;padding:20px 22px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);width:22%;box-shadow:2px 0 6px -2px rgba(0,0,0,.25)">Feature</th>
         <th style="text-align:left;padding:20px 22px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);width:28%">What it does</th>
         <th style="text-align:left;padding:20px 22px;width:25%">
-          <div style="font-size:11px;letter-spacing:.08em;color:#8fb51f;font-weight:800;margin-bottom:6px">FREEMIUM</div>
+          <div data-micro style="font-size:11px;letter-spacing:.08em;color:#8fb51f;font-weight:800;margin-bottom:6px">FREEMIUM</div>
           <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">Rs 0 <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,.5)">forever</span></div>
           <div style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:10px">Free</div>
           <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="display:inline-block;background:#8fb51f;color:#14243d;border-radius:999px;padding:8px 16px;font-weight:800;font-size:12.5px">Talk to sales</a>
         </th>
         <th style="text-align:left;padding:20px 22px;width:25%">
-          <div style="font-size:11px;letter-spacing:.08em;color:#8fb51f;font-weight:800;margin-bottom:6px">STARTER</div>
+          <div data-micro style="font-size:11px;letter-spacing:.08em;color:#8fb51f;font-weight:800;margin-bottom:6px">STARTER</div>
           <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">Rs 1,500 <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,.5)">/POS · mo</span></div>
           <div style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:10px">Premium · 1–2 outlets</div>
           <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="display:inline-block;background:#8fb51f;color:#14243d;border-radius:999px;padding:8px 16px;font-weight:800;font-size:12.5px">Talk to sales</a>
@@ -202,13 +208,13 @@
 </section>
 
 <!-- CTA BANNER -->
-<section style="max-width:1240px;margin:0 auto;padding:30px 40px 60px">
-  <div style="background:#14243d;border-radius:22px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#fff">
+<section data-gut data-sec style="max-width:1240px;margin:0 auto;padding:30px 40px 60px">
+  <div data-card style="background:#14243d;border-radius:22px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#fff">
     <div style="max-width:560px">
       <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:24px;margin-bottom:8px">Freemium to Starter — priced per POS.</h3>
       <p style="font-size:15px;line-height:1.5;color:rgba(255,255,255,.62);margin:0">Plan prices are shown in the comparison table above. Tell us your setup and we'll build a quote.</p>
     </div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
+    <div data-btnrow style="display:flex;gap:12px;flex-wrap:wrap">
       <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#8fb51f;color:#14243d;border-radius:999px;padding:14px 26px;font-weight:800;font-size:15px">Talk to sales</a>
       <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="border:1.5px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:13px 26px;font-weight:700;font-size:15px">Get a custom quote</a>
     </div>
@@ -221,7 +227,7 @@
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:20px"><img src="assets/lgo-logo-full.png" alt="LGO Technologies (Pvt) Ltd." style="height:90px;width:auto;display:block"></div>
       <p style="font-size:16px;line-height:1.55;color:#5b6472;max-width:340px;margin-bottom:20px">A fintech taking Sri Lanka's micro-merchants from payment acceptance to credit. Built in Colombo by LGO Paytech, with LankaPay and a local lending partner.</p>
       <div style="font-size:15px;color:#5b6472;line-height:1.9;margin-bottom:20px"><a href="mailto:connect@lgotech.lk" style="font-weight:700">connect@lgotech.lk</a><br><a href="tel:+94772017950" style="font-weight:700">(+94) 77 201 7950</a></div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Talk to sales</a></div>
+      <div data-btnrow style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Talk to sales</a></div>
     </div>
     <div><div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Products</div><div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="https://lgo-youshop-4b1c31c5-youshop-pnqqhnama-kevinwekesa254s-projects.vercel.app">youShop</a><a href="https://lgo-youresto-4b1c31c5-youresto-1sub1o9k8.vercel.app">youResto</a><a href="https://lgo-youqr-4b1c31c5-youqr-qnrlxmxvu-kevinwekesa254s-projects.vercel.app">youQR</a><a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app">Hardware</a></div></div>
     <div><div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Merchants</div><div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="index.html#pricing">Pricing</a><a href="index.html#how">How it works</a><a href="index.html#support">Help centre</a></div></div>

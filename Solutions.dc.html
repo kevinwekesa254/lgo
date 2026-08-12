@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
 <style>
   @font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Regular.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Medium.woff2') format('woff2');font-weight:500;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Bold.woff2') format('woff2');font-weight:700;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Black.woff2') format('woff2');font-weight:800;font-display:swap}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -35,11 +36,11 @@
 <div style="background:#f4efe4">
 
 <header style="position:sticky;top:0;z-index:50;padding:16px 20px 0">
-  <div style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
+  <div data-gut style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
     <a href="index.html" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="assets/lgo-mark.png" alt="LGO" style="height:36px;width:auto;display:block"><span style="font-weight:800;font-size:28px;letter-spacing:.06em;color:#141414">LGO</span></a>
     <nav data-r="nav" style="display:flex;gap:30px;margin-left:20px">
       <div data-dropdown style="position:relative">
-        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span style="font-size:10px;color:#8a8574">▾</span></a>
+        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span data-micro style="font-size:10px;color:#8a8574">▾</span></a>
         <div data-dropdown-panel style="position:absolute;top:100%;left:0;padding-top:16px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s;pointer-events:none">
           <div style="background:#fff;border:1px solid rgba(18,18,18,.06);border-radius:16px;box-shadow:0 16px 44px -20px rgba(18,18,18,.4);padding:8px;min-width:170px;display:flex;flex-direction:column;gap:2px">
             <a href="YouShop.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:15px">youShop</a>
@@ -69,11 +70,16 @@
     <a href="Solutions.dc.html" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06);color:#4f8a1e">Solutions</a>
     <a href="index.html#pricing" data-i18n="nav.pricing" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Pricing</a>
     <a href="Contact.dc.html" data-i18n="nav.contact" style="font-weight:700;font-size:17px;padding:12px 0">Contact</a>
+  
+    <div data-menu-extra>
+      <a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener"><span data-i18n="btn.getFree">Get youShop free</span>&nbsp;&nbsp;→</a>
+      <select data-lang-select aria-label="Language"><option value="en">English</option><option value="sg">Singlish</option><option value="si">සිංහල</option><option value="ta">தமிழ්</option></select>
+    </div>
   </nav>
 </header>
 
 <!-- HERO -->
-<section style="max-width:1160px;margin:0 auto;padding:64px 40px 30px">
+<section data-gut data-sec style="max-width:1160px;margin:0 auto;padding:64px 40px 30px">
   <a href="index.html" style="font-size:14px;font-weight:700;color:#7c869a;display:inline-block;margin-bottom:22px">← Back to home</a>
   <div style="display:flex;align-items:center;gap:11px;color:#4f8a1e;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px"><span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span>Solutions</div>
   <h1 data-h1 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:46px;line-height:1.06;letter-spacing:-.01em;margin-bottom:20px">One platform. <span style="font-style:italic;color:#4f8a1e">Every kind of business.</span></h1>
@@ -81,7 +87,7 @@
 </section>
 
 <!-- SOLUTIONS -->
-<section style="max-width:1160px;margin:0 auto;padding:20px 40px 40px;display:flex;flex-direction:column;gap:22px">
+<section data-gut data-sec style="max-width:1160px;margin:0 auto;padding:20px 40px 40px;display:flex;flex-direction:column;gap:22px">
 
   <div data-r="sol" style="display:grid;grid-template-columns:1fr 1fr;background:#14243d;color:#fff;border-radius:20px;overflow:hidden">
     <div data-r="solimg" style="position:relative;min-height:280px"><img src="assets/sol-cafe.jpg" alt="Customer scanning a table QR code in a café" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
@@ -94,7 +100,7 @@
         <li>◆&nbsp; A direct branded app saves 25–30% otherwise lost to aggregator commission.</li>
         <li>◆&nbsp; AI demand forecasting and kitchen hygiene monitoring keep costs and compliance in check.</li>
       </ul>
-      <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:10px">How it flows</div>
+      <div data-micro style="font-size:11px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:10px">How it flows</div>
       <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14.5px;font-weight:700;color:rgba(255,255,255,.85)">
         <span>Stock</span><span style="color:#8fb51f">→</span><span>Order</span><span style="color:#8fb51f">→</span><span>Kitchen</span><span style="color:#8fb51f">→</span><span>Pay</span><span style="color:#8fb51f">→</span><span>Book</span><span style="color:#8fb51f">→</span><span>Insights</span>
       </div>
@@ -111,7 +117,7 @@
         <li>◆&nbsp; Reps see each outlet's credit exposure before writing the invoice.</li>
         <li>◆&nbsp; Pre-approved retailer lending, underwritten from purchase pattern — no paperwork.</li>
       </ul>
-      <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
+      <div data-micro style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
       <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14.5px;font-weight:700;color:#3a4457">
         <span>Stock</span><span style="color:#4f8a1e">→</span><span>Route</span><span style="color:#4f8a1e">→</span><span>Order</span><span style="color:#4f8a1e">→</span><span>Pay</span><span style="color:#4f8a1e">→</span><span>Dispatch</span><span style="color:#4f8a1e">→</span><span>Book</span>
       </div>
@@ -130,7 +136,7 @@
         <li>◆&nbsp; Automated nightly settlement — commission, bonus, fuel and tax withholding.</li>
         <li>◆&nbsp; Lending against trip history for fuel and repair advances, auto-repaid from earnings.</li>
       </ul>
-      <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
+      <div data-micro style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
       <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14.5px;font-weight:700;color:#3a4457">
         <span>Request</span><span style="color:#4f8a1e">→</span><span>Trip</span><span style="color:#4f8a1e">→</span><span>Pay</span><span style="color:#4f8a1e">→</span><span>Split</span><span style="color:#4f8a1e">→</span><span>Wallet</span><span style="color:#4f8a1e">→</span><span>Advance</span>
       </div>
@@ -147,7 +153,7 @@
         <li>◆&nbsp; Inter-store transfers keep warehouse and outlet stock in sync, with no double-counting.</li>
         <li>◆&nbsp; One settlement across counter, table QR, kiosk and online.</li>
       </ul>
-      <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:10px">How it flows</div>
+      <div data-micro style="font-size:11px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:10px">How it flows</div>
       <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14.5px;font-weight:700;color:rgba(255,255,255,.85)">
         <span>Procure</span><span style="color:#8fb51f">→</span><span>Cost</span><span style="color:#8fb51f">→</span><span>Warehouse</span><span style="color:#8fb51f">→</span><span>Transfer</span><span style="color:#8fb51f">→</span><span>Sell</span><span style="color:#8fb51f">→</span><span>Close</span>
       </div>
@@ -166,7 +172,7 @@
         <li>◆&nbsp; A live Predictability Index replaces paperwork as a credit score.</li>
         <li>◆&nbsp; Pre-approved lending appears in the dashboard after about 90 days of sales.</li>
       </ul>
-      <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
+      <div data-micro style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
       <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14.5px;font-weight:700;color:#3a4457">
         <span>Install</span><span style="color:#4f8a1e">→</span><span>Accept</span><span style="color:#4f8a1e">→</span><span>History</span><span style="color:#4f8a1e">→</span><span>Score</span><span style="color:#4f8a1e">→</span><span>Loan</span><span style="color:#4f8a1e">→</span><span>Repay</span>
       </div>
@@ -183,7 +189,7 @@
         <li>◆&nbsp; Role-based access — franchisees see their own P&amp;L, HQ sees everything.</li>
         <li>◆&nbsp; Group books consolidate nightly, with VAT filed per entity.</li>
       </ul>
-      <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
+      <div data-micro style="font-size:11px;font-weight:800;letter-spacing:.1em;color:#8a8574;text-transform:uppercase;margin-bottom:10px">How it flows</div>
       <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14.5px;font-weight:700;color:#3a4457">
         <span>Procure</span><span style="color:#4f8a1e">→</span><span>Distribute</span><span style="color:#4f8a1e">→</span><span>Sell</span><span style="color:#4f8a1e">→</span><span>Close</span><span style="color:#4f8a1e">→</span><span>Consolidate</span><span style="color:#4f8a1e">→</span><span>Insights</span>
       </div>
@@ -202,7 +208,7 @@
         <li>◆&nbsp; Mark an item out of stock once; it disappears from every channel in seconds.</li>
         <li>◆&nbsp; Per-brand settlement and demand forecasting to cut prep waste.</li>
       </ul>
-      <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:10px">How it flows</div>
+      <div data-micro style="font-size:11px;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:10px">How it flows</div>
       <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14.5px;font-weight:700;color:rgba(255,255,255,.85)">
         <span>Procure</span><span style="color:#8fb51f">→</span><span>Configure</span><span style="color:#8fb51f">→</span><span>Orders</span><span style="color:#8fb51f">→</span><span>Display</span><span style="color:#8fb51f">→</span><span>Settle</span><span style="color:#8fb51f">→</span><span>Forecast</span>
       </div>
@@ -212,12 +218,12 @@
 </section>
 
 <!-- CTA -->
-<section style="max-width:1160px;margin:0 auto;padding:10px 40px 60px">
-  <div style="background:#14243d;border-radius:22px;padding:44px;text-align:center;color:#fff">
+<section data-gut data-sec style="max-width:1160px;margin:0 auto;padding:10px 40px 60px">
+  <div data-card style="background:#14243d;border-radius:22px;padding:44px;text-align:center;color:#fff">
     <div style="font-size:12px;font-weight:800;letter-spacing:.1em;color:#8fb51f;text-transform:uppercase;margin-bottom:14px">Don't see your use case?</div>
     <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;line-height:1.15;max-width:560px;margin:0 auto 14px">Every business has a solution somewhere in the platform.</h3>
     <p style="font-size:16px;line-height:1.5;color:rgba(255,255,255,.62);max-width:520px;margin:0 auto 26px">Tell us how your business runs — we'll show you exactly how the platform assembles for it.</p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <div data-btnrow style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="Contact.dc.html" style="background:#8fb51f;color:#14243d;border-radius:999px;padding:14px 26px;font-weight:800;font-size:15px">Talk to sales</a>
       <a href="index.html#pricing" style="border:1.5px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:13px 26px;font-weight:700;font-size:15px">See pricing</a>
     </div>
@@ -230,7 +236,7 @@
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:20px"><img src="assets/lgo-logo-full.png" alt="LGO Technologies (Pvt) Ltd." style="height:90px;width:auto;display:block"></div>
       <p style="font-size:16px;line-height:1.55;color:#5b6472;max-width:340px;margin-bottom:20px">A fintech taking Sri Lanka's micro-merchants from payment acceptance to credit. Built in Colombo by LGO Paytech, with LankaPay and a local lending partner.</p>
       <div style="font-size:15px;color:#5b6472;line-height:1.9;margin-bottom:20px"><a href="mailto:connect@lgotech.lk" style="font-weight:700">connect@lgotech.lk</a><br><a href="tel:+94772017950" style="font-weight:700">(+94) 77 201 7950</a></div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a></div>
+      <div data-btnrow style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a></div>
     </div>
     <div><div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Products</div><div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="YouShop.dc.html">youShop</a><a href="YouResto.dc.html">youResto</a><a href="YouQR.dc.html">youQR</a><a href="Hardware.dc.html">Hardware</a></div></div>
     <div><div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Merchants</div><div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="Solutions.dc.html">Solutions</a><a href="index.html#pricing">Pricing</a><a href="index.html#how">How it works</a></div></div>

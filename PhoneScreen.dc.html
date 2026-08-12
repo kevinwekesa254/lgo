@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -10,6 +10,7 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
 <style>@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Regular.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Medium.woff2') format('woff2');font-weight:500;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Bold.woff2') format('woff2');font-weight:700;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Black.woff2') format('woff2');font-weight:800;font-display:swap}</style>
 </helmet>
 <div style="width:340px;background:#1c1c1e;border-radius:44px;padding:11px;box-shadow:0 40px 80px rgba(18,18,18,.45);font-family:'Saprona',system-ui,sans-serif">
@@ -34,13 +35,13 @@
           <div style="font-size:30px;font-weight:800;color:#141414;line-height:1">115.00</div>
           <span style="display:inline-flex;align-items:center;gap:5px;background:#e7edf9;color:#17408b;font-size:12px;font-weight:800;padding:5px 10px;border-radius:8px;margin-top:9px">↑ 115.00</span>
         </div>
-        <div style="width:120px;background:#0d5566;border-radius:18px;padding:15px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
+        <div data-row style="width:120px;background:#0d5566;border-radius:18px;padding:15px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
           <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 1 0 9 9h-9V3Z" fill="#fff"/><path d="M13 3a8 8 0 0 1 8 8h-8V3Z" fill="#7fb9c6"/></svg>
           <b style="font-size:15px;margin-top:14px">Accounting</b>
         </div>
       </div>
       <div style="border:1px solid #eef0f2;border-radius:16px;padding:15px 14px 6px;margin-bottom:14px">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><b style="font-size:13px;color:#141414">Retail</b><span style="display:inline-flex;align-items:center;gap:5px;background:#dcf1f9;color:#2a97c4;font-size:11px;font-weight:800;padding:6px 11px;border-radius:9px">+ Add Inventory</span></div>
+        <div data-row style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><b style="font-size:13px;color:#141414">Retail</b><span style="display:inline-flex;align-items:center;gap:5px;background:#dcf1f9;color:#2a97c4;font-size:11px;font-weight:800;padding:6px 11px;border-radius:9px">+ Add Inventory</span></div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px 4px;text-align:center;padding-bottom:12px">
           <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M2 3h2l2.5 12h11l2-8H6"/></svg><div style="font-size:11px;color:#3a4457;margin-top:5px">Sales</div></div>
           <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a9 9 0 1 1-2 6"/><path d="M3 4v5h5"/></svg><div style="font-size:11px;color:#3a4457;margin-top:5px">Returns</div></div>
@@ -50,7 +51,7 @@
         </div>
       </div>
       <div style="border:1px solid #eef0f2;border-radius:16px;padding:15px 14px 6px">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><b style="font-size:13px;color:#141414">Operations</b><span style="display:inline-flex;align-items:center;gap:5px;background:#dcf1f9;color:#2a97c4;font-size:11px;font-weight:800;padding:6px 11px;border-radius:9px">+ Add Customer</span></div>
+        <div data-row style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><b style="font-size:13px;color:#141414">Operations</b><span style="display:inline-flex;align-items:center;gap:5px;background:#dcf1f9;color:#2a97c4;font-size:11px;font-weight:800;padding:6px 11px;border-radius:9px">+ Add Customer</span></div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px 4px;text-align:center;padding-bottom:12px">
           <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 6a3 3 0 0 1 0 5M21 20a5 5 0 0 0-4-5"/></svg><div style="font-size:11px;color:#3a4457;margin-top:5px">Customers</div></div>
           <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><path d="M2 20a6 6 0 0 1 12 0"/><rect x="14" y="12" width="8" height="7" rx="1"/></svg><div style="font-size:11px;color:#3a4457;margin-top:5px">Suppliers</div></div>

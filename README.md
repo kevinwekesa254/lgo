@@ -42,6 +42,58 @@ Keep the two in sync: a content change made to `YouShop.dc.html` also needs to l
 | `senfay-common.js` | Shared header/footer behaviour, i18n strings, language switcher |
 | `image-slot.js` | Image placeholder / slot helper used while laying pages out |
 | `support.js` | Runtime shim loaded first by every page |
+| `mobile.css` | Mobile layout layer — see below |
+
+## Mobile layer (`mobile.css`)
+
+Every page links `mobile.css` after its inline styles. All of it lives inside
+`max-width` media queries, so desktop rendering is untouched; the breakpoints are
+1024 / 860 / 560 / 400 / 359px.
+
+Two things to know before editing it:
+
+1. **`!important` is required.** The pages are authored with inline `style=""`
+   attributes, which outrank any stylesheet.
+2. **`[style*="..."]` selectors do not work.** The runtime rewrites every inline style
+   attribute into normalised form — `padding:96px 40px` becomes
+   `padding: 96px 40px 40px;`, colours become `rgb(...)`. Match on the `data-` hooks
+   below instead.
+
+### Data hooks
+
+These are stamped onto the markup purely as styling handles; they have no behaviour.
+
+| Hook | Marks |
+| --- | --- |
+| `data-sec` | every `<section>` — vertical rhythm |
+| `data-gut` | page-level horizontal rails — the 20px gutter |
+| `data-card` | rounded panels with ≥30px inner padding |
+| `data-btnrow` | flex rows of pill buttons — stacked full-width on phones |
+| `data-stack` | exactly-two-track text grids that collapse to one column |
+| `data-row` | `space-between` flex rows that need a gap when narrow |
+| `data-micro` | elements whose inline `font-size` is below 12px |
+| `data-tablewrap` | the `overflow-x:auto` wrappers around comparison tables |
+| `data-marquee` | the payment-rail marquee track |
+| `data-phone` / `data-float` | the hero phone mock and its floating cards |
+| `data-stats` / `data-herocta` | hero stat row and hero CTA row (home only) |
+| `data-menu-extra` | CTA + language switcher inside the mobile menu panel |
+
+Two hooks carry a real trap if you regenerate them:
+
+- `data-stack` must match the track list **exactly**. `grid-template-columns:1fr 1fr`
+  is a substring of `1fr 1fr 1fr`, and collapsing a 3-track grid turns the numeric
+  keypad mock into a single column.
+- `data-btnrow` must never be applied inside `<header>`. The header's control cluster
+  is a flex row containing a pill anchor, so a naive match catches it and stacks the
+  logo, hamburger and language select vertically.
+
+### The phone mock
+
+`[data-phone]` is a fixed 392×770 box. It is scaled as a unit with `transform`, plus
+matching **negative margins** — a transform alone leaves the original box occupying the
+grid track, so the hero would still overflow. `--ph` is stepped per breakpoint rather
+than fluid, because a fluid ratio needs a length divided by a length, which `calc()`
+does not portably support.
 
 ## Assets
 

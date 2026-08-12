@@ -1,0 +1,738 @@
+/* ==========================================================================
+   LGO 2026 — mobile refinement layer
+   --------------------------------------------------------------------------
+   Loaded after each page's inline <style> block. Every rule sits inside a
+   max-width media query, so desktop rendering is byte-for-byte unchanged.
+
+   The pages are authored with inline style="" attributes, which outrank any
+   stylesheet — so overrides here carry !important. That is the same
+   convention the pages' own media queries already use.
+
+   Breakpoints
+     <=1024  tablet / small laptop  (desktop nav already collapses here)
+     <=860   phone landscape and up — the main mobile treatment
+     <=560   phone portrait
+     <=390   small phones (iPhone SE / mini)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. FOUNDATIONS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+  html {
+    -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+  }
+
+  body {
+    /* Belt-and-braces against a stray wide child creating a sideways scroll.
+       overflow-x:clip (not :hidden) leaves position:sticky on the header
+       working, because it does not turn body into a scroll container. */
+    overflow-x: clip;
+    /* Landscape on notched phones: keep content out from under the cutout. */
+    padding-left:  env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Nothing should be able to push the page wider than the screen. */
+  img, svg, video, canvas, iframe {
+    max-width: 100%;
+  }
+
+  /* Softer, more native-feeling press state than the default blue flash. */
+  a, button, select, [role="button"] {
+    -webkit-tap-highlight-color: rgba(18, 18, 18, .06);
+  }
+
+  /* Long unbroken strings (URLs, emails) must wrap rather than overflow. */
+  p, li, td, th, h1, h2, h3, h4 {
+    overflow-wrap: break-word;
+  }
+}
+
+
+/* ==========================================================================
+   2. HEADER
+   --------------------------------------------------------------------------
+   The overflow that broke every page: the header's right-hand cluster
+   (hamburger + language <select> + a nowrap "Get youShop free" pill) is
+   ~394px wide on its own and never collapsed, pushing the document to 578px
+   inside a 390px viewport.
+
+   Fix: on mobile the bar carries only the logo, a compact language control
+   and the hamburger. The CTA moves into the slide-out panel, where it gets
+   more presence than it had squeezed into the bar.
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  header {
+    padding: 10px 12px 0 !important;
+  }
+
+  /* The glass bar itself. */
+  header > div:first-child {
+    gap: 12px !important;
+    padding: 9px 10px 9px 14px !important;
+    border-radius: 18px !important;
+  }
+
+  /* Logo lockup — trimmed so it never competes with the controls. */
+  header img[alt="LGO"] {
+    height: 30px !important;
+  }
+
+  header > div:first-child > div:first-child > span {
+    font-size: 22px !important;
+    letter-spacing: .05em !important;
+  }
+
+  /* The app-store CTA lives in the panel on mobile, not the bar. Scoped to
+     the bar itself — the slide-out panel is also a child of <header>, and a
+     blanket rule here hid the panel's copy of the CTA too. */
+  header > div:first-child a[href*="play.google.com"] {
+    display: none !important;
+  }
+
+  /* Compact language control: still a real <select> (native picker, keeps
+     the JS binding), just sized down to a pill that fits beside the burger.
+     Deliberately no max-width — capping it clipped "English" mid-word. The
+     bar has room: logo ~105 + burger 42 + select ~90 + gaps < 300px. */
+  header [data-lang-select] {
+    padding: 9px 22px 9px 10px !important;
+    font-size: 12.5px !important;
+    border-radius: 11px !important;
+    min-height: 42px !important;
+    text-overflow: ellipsis !important;
+  }
+
+  header [data-menu-btn] {
+    width: 42px !important;
+    height: 42px !important;
+    flex: 0 0 auto !important;
+  }
+
+  header > div:first-child > div:last-of-type {
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 359px) {
+  /* iPhone SE class: trim the wordmark rather than the language control,
+     which is a functional element on a four-language site. */
+  header [data-lang-select] {
+    font-size: 12px !important;
+    padding: 9px 20px 9px 8px !important;
+  }
+
+  header > div:first-child > div:first-child > span {
+    font-size: 19px !important;
+  }
+
+  header img[alt="LGO"] {
+    height: 26px !important;
+  }
+}
+
+
+/* ==========================================================================
+   3. SLIDE-OUT MENU PANEL
+   --------------------------------------------------------------------------
+   Reads as a native sheet: 24px radius, hairline-separated 48px rows,
+   and the primary CTA anchored at the bottom as a full-width pill.
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  [data-menu-panel] {
+    margin: 8px 12px 0 !important;
+    padding: 8px 18px 18px !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(18, 18, 18, .06) !important;
+    box-shadow: 0 24px 60px -22px rgba(18, 18, 18, .45) !important;
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* Every row is a comfortable, unambiguous tap target. */
+  [data-menu-panel] > a {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 48px !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Product sub-items sit inset under their parent, in a lighter weight. */
+  [data-menu-panel] > a[href*="You"] {
+    min-height: 44px !important;
+    padding-left: 16px !important;
+  }
+
+  /* Menu-only controls appended by the mobile layer (see mobile-menu-extra). */
+  [data-menu-extra] {
+    display: block !important;
+    margin-top: 14px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(18, 18, 18, .08) !important;
+  }
+
+  [data-menu-extra] > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 54px !important;
+    background: #141414 !important;
+    color: #fff !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    letter-spacing: .01em !important;
+  }
+
+  [data-menu-extra] > select {
+    width: 100% !important;
+    margin-top: 10px !important;
+    min-height: 50px !important;
+    padding: 12px 14px !important;
+    font-size: 16px !important;  /* >=16px stops iOS zooming on focus */
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    border: 1.5px solid #ccd4e2 !important;
+    border-radius: 14px !important;
+    background: #fff !important;
+    color: #141414 !important;
+  }
+}
+
+/* Above the mobile breakpoint the panel is never shown, so its extras
+   must not leak into the desktop layout. */
+@media (min-width: 861px) {
+  [data-menu-extra] { display: none !important; }
+}
+
+
+/* ==========================================================================
+   4. HERO
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  [data-r="hero"] {
+    padding: 40px 20px 8px !important;
+    gap: 30px !important;
+  }
+
+  /* Grid and flex children default to min-width:auto, so a wide child (the
+     phone mock) can refuse to shrink and blow out the track. */
+  [data-r="hero"] > * {
+    min-width: 0 !important;
+  }
+
+  /* Eyebrow: two lines of shouting caps is a lot on a phone. */
+  [data-r="hero"] > div > div:first-child {
+    font-size: 11.5px !important;
+    letter-spacing: .12em !important;
+    line-height: 1.4 !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* Fluid headline — scales continuously instead of stepping at 760/560. */
+  [data-h1] {
+    font-size: clamp(33px, 8.9vw, 62px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.018em !important;
+    margin-bottom: 20px !important;
+  }
+
+  [data-r="hero"] p {
+    font-size: clamp(16px, 4.3vw, 21px) !important;
+    line-height: 1.55 !important;
+    margin-bottom: 28px !important;
+  }
+}
+
+@media (max-width: 560px) {
+
+  /* Primary CTA goes full-width — the standard mobile affordance, and it
+     gives the button the presence it loses when the hero narrows. */
+  [data-herocta] {
+    margin-bottom: 34px !important;
+  }
+
+  [data-herocta] > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 56px !important;
+    padding: 16px 24px !important;
+    font-size: 16.5px !important;
+  }
+
+  /* Three stats side by side become unreadable slivers below ~560px.
+     A hairline-separated list keeps the numbers big and the labels legible. */
+  [data-stats] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  [data-stats] > div {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 16px !important;
+    padding: 15px 0 !important;
+    border-top: 1px solid rgba(18, 18, 18, .09) !important;
+  }
+
+  [data-stats] > div:last-child {
+    border-bottom: 1px solid rgba(18, 18, 18, .09) !important;
+  }
+
+  [data-stats] > div > div:first-child {
+    font-size: 31px !important;
+    flex: 0 0 auto !important;
+    min-width: 104px !important;
+  }
+
+  [data-stats] > div > div:last-child {
+    margin-top: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    letter-spacing: .07em !important;
+  }
+}
+
+
+/* ==========================================================================
+   5. PHONE MOCKUP
+   --------------------------------------------------------------------------
+   The mock is a fixed 392x770 box with cards floating up to 56px outside it.
+   Rather than re-laying it out, it is scaled as a unit: the transform handles
+   the visual, and matching negative margins shrink the layout box so the
+   grid track shrinks with it (a transform alone would not).
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  [data-phone] {
+    /* Stepped rather than fluid: a fluid ratio would need a length divided by
+       a length, which is not portable in calc(). Each step keeps the 392px
+       mock inside the narrowest viewport that reaches it, plus 20px gutters. */
+    --ph: .88;
+
+    transform: scale(var(--ph)) !important;
+    transform-origin: top center !important;
+
+    /* Reclaim the layout space the scale-down frees up — a transform alone
+       leaves the original 392x770 box occupying the grid track. */
+    margin-left:   calc(392px * (var(--ph) - 1) / 2) !important;
+    margin-right:  calc(392px * (var(--ph) - 1) / 2) !important;
+    margin-bottom: calc(770px * (var(--ph) - 1)) !important;
+  }
+
+  /* 393-430px wide phones: 392 * .86 = 337 inside 353 of usable width. */
+  @media (max-width: 560px) { [data-phone] { --ph: .86; } }
+
+  /* 360-392px (iPhone 12/13 mini, most Android): 306 inside 320. */
+  @media (max-width: 400px) { [data-phone] { --ph: .78; } }
+
+  /* 320-359px (iPhone SE): 274 inside 280. */
+  @media (max-width: 359px) { [data-phone] { --ph: .70; } }
+
+  /* Cards that hung off the sides now overlap the device edges — reads as a
+     deliberate layered composition rather than something falling off-screen. */
+  [data-float="left"]  { left:  4px !important; right: auto !important; }
+  [data-float="right"] { right: 4px !important; left:  auto !important; }
+}
+
+
+/* ==========================================================================
+   6. SECTION RHYTHM & TYPOGRAPHY
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  /* Desktop uses 90-96px of vertical section padding; that is roughly two
+     phone screens of emptiness. Tightened, but still generous.
+     NB: the runtime rewrites every inline style attribute into normalised
+     form ("padding: 96px 40px 40px;"), so [style*=] selectors do not match —
+     these hooks are stamped onto the markup instead. */
+  [data-sec] {
+    padding-top: 58px !important;
+    padding-bottom: 44px !important;
+  }
+
+  /* Horizontal gutter: one consistent 20px rail down the whole page,
+     applied to sections and to the centred max-width containers inside
+     full-bleed sections. */
+  [data-gut],
+  [data-pad] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  [data-h2] {
+    font-size: clamp(26px, 7.2vw, 40px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.015em !important;
+  }
+
+  /* Nothing informational should render below 12px on a phone. The one
+     exception is the phone mockup, whose miniature UI is decorative and
+     scales as a picture — hence the :not() guard. */
+  section :not([data-phone] *) {
+    text-wrap: pretty;
+  }
+}
+
+
+/* ==========================================================================
+   7. CARDS & GRIDS
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  [data-r="two"],
+  [data-r="three"],
+  [data-r="cards"],
+  [data-r="sol"],
+  [data-r="qrcard"],
+  [data-2col],
+  [data-price-grid] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  [data-r="two"] > *,
+  [data-r="three"] > *,
+  [data-r="cards"] > *,
+  [data-r="four"] > *,
+  [data-r="sol"] > * {
+    min-width: 0 !important;
+  }
+
+  /* Product rows stack instead of squeezing. */
+  [data-prod],
+  [data-prodrow] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 560px) {
+
+  [data-r="four"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Two-up text grids (feature bullet pairs) squeeze each cell to ~150px,
+     which wraps four-word labels onto three lines. Stacked reads far better.
+     Grids with their own background/border are excluded at the hook stage —
+     those are mock receipts and keypads that must keep their shape. */
+  [data-stack] {
+    grid-template-columns: 1fr !important;
+    gap: 10px 0 !important;
+  }
+
+  /* Marquee tiles: smaller so more than two rails are visible at a time. */
+  [data-marquee] > div {
+    height: 68px !important;
+    width: 148px !important;
+    padding: 12px 18px !important;
+    border-radius: 14px !important;
+  }
+}
+
+
+/* ==========================================================================
+   8. COMPARISON TABLES
+   --------------------------------------------------------------------------
+   These already sit in an overflow-x:auto wrapper, so they never broke the
+   page — but on a phone there is no visual cue that they scroll, and the
+   momentum/snap behaviour was unset.
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  [data-tablewrap] {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    /* Fades the right edge so it is obvious there is more table off-screen. */
+    -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent 100%);
+            mask-image: linear-gradient(90deg, #000 88%, transparent 100%);
+  }
+
+  [data-tablewrap] table {
+    font-size: 13.5px !important;
+  }
+
+  [data-tablewrap] th,
+  [data-tablewrap] td {
+    padding: 13px 14px !important;
+  }
+
+  /* Tier labels were rendering at 10-11px. */
+  [data-tablewrap] th div {
+    font-size: 12px !important;
+  }
+
+  /* "Talk to sales" buttons inside the table headers. */
+  [data-tablewrap] th a {
+    min-height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  [data-r="footer"] {
+    gap: 26px !important;
+  }
+
+  /* Footer links were 18-20px tall — well under the 44px touch guideline.
+     Scoped to <footer> so the legal bar below the grid is covered too. */
+  footer a,
+  [data-r="footer"] a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 40px !important;
+  }
+}
+
+@media (max-width: 560px) {
+
+  [data-r="footer"] {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+}
+
+
+/* ==========================================================================
+   10. FORMS
+   --------------------------------------------------------------------------
+   iOS Safari zooms the viewport whenever a focused field renders below 16px,
+   and the page never zooms back out. 16px everywhere prevents that.
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  input, select, textarea {
+    font-size: 16px !important;
+    font-family: inherit !important;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    width: 100% !important;
+    min-height: 50px !important;
+    padding: 13px 15px !important;
+    border-radius: 14px !important;
+  }
+
+  textarea {
+    min-height: 120px !important;
+  }
+
+  /* Checkboxes stay square, but grow to a tappable size. */
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 22px !important;
+    height: 22px !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  [data-contact-form] button,
+  [data-form-panel] button,
+  [data-contact-form] button[type="submit"] {
+    width: 100% !important;
+    min-height: 54px !important;
+    font-size: 16.5px !important;
+  }
+
+  [data-form-tab] {
+    min-height: 46px !important;
+  }
+}
+
+
+/* ==========================================================================
+   11. FLOATING HELP WIDGET
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  /* Clears the home indicator on gesture-nav phones. */
+  body > button[aria-label="Help"] {
+    right: 16px !important;
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    width: 54px !important;
+    height: 54px !important;
+  }
+
+  body > div:has(> button[aria-label="Help"]),
+  body > button[aria-label="Help"] + div {
+    right: 12px !important;
+    left: 12px !important;
+    width: auto !important;
+    bottom: calc(82px + env(safe-area-inset-bottom)) !important;
+    max-height: 70vh !important;
+  }
+}
+
+
+/* ==========================================================================
+   12. BUTTON ROWS
+   --------------------------------------------------------------------------
+   Pill buttons sitting in a flex row shrink to their label on a phone, so a
+   pair of CTAs ends up as two differently sized lozenges — the single most
+   "unfinished" looking thing on the product pages. Full-width and stacked is
+   both the conventional mobile affordance and the tidier composition.
+   ========================================================================== */
+
+@media (max-width: 560px) {
+
+  [data-btnrow] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  [data-btnrow] > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 54px !important;
+    padding: 15px 22px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+}
+
+
+/* ==========================================================================
+   13. CARDS
+   ========================================================================== */
+
+@media (max-width: 560px) {
+
+  /* space-between rows author no gap, relying on desktop width to keep the
+     label and value apart. Narrowed, they touch. */
+  [data-row] {
+    gap: 10px !important;
+  }
+
+  /* Panels carry 30-52px of inner padding for desktop. On a 390px screen
+     that spends a quarter of the width on whitespace. */
+  [data-card] {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  /* The contact form's 52px inset also crushed it vertically. */
+  [data-contact-form] {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    border-radius: 22px !important;
+  }
+}
+
+
+/* ==========================================================================
+   14. SEGMENTED CONTROL (contact form switcher)
+   ========================================================================== */
+
+@media (max-width: 560px) {
+
+  /* inline-flex leaves the two tabs unequal and the pill floating; full
+     width with equal flex basis makes it read as one deliberate control. */
+  div:has(> [data-form-tab]) {
+    display: flex !important;
+    width: 100% !important;
+  }
+
+  [data-form-tab] {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    min-height: 52px !important;
+    padding: 12px 10px !important;
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+  }
+}
+
+
+/* ==========================================================================
+   15. MINIMUM LEGIBLE TEXT
+   --------------------------------------------------------------------------
+   Nothing informational should render below 12px on a phone. The phone
+   mockup is exempt: its miniature UI is a picture of an app, and it scales
+   as a unit rather than being read.
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  /* data-micro is stamped onto every element whose inline style sets a
+     font-size below 12px, excluding the phone mockup. Inline styles outrank
+     stylesheets, so these could not be lifted by a selector alone. */
+  [data-micro] {
+    font-size: 12px !important;
+  }
+
+  /* Eyebrow / kicker labels. */
+  [data-r="hero"] > div > div:first-child {
+    font-size: 12px !important;
+  }
+
+  /* Standalone back-link on the sub-pages: a 17px-tall target. Solutions
+     carries no data-i18n on its copy, hence the structural fallback. */
+  a[data-i18n="back.home"],
+  [data-sec] > a[href="index.html"],
+  [data-sec] > div > a[href="index.html"]:first-child {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+    font-size: 15px !important;
+    margin-bottom: 10px !important;
+  }
+
+  [data-tablewrap] th div,
+  [data-tablewrap] th span,
+  [data-tablewrap] th a,
+  [data-tablewrap] td {
+    font-size: 12.5px !important;
+  }
+}
+
+
+/* ==========================================================================
+   16. MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-marquee] {
+    animation: none !important;
+  }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+  }
+}

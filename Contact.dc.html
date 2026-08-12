@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
 <style>
   @font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Regular.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Medium.woff2') format('woff2');font-weight:500;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Bold.woff2') format('woff2');font-weight:700;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Black.woff2') format('woff2');font-weight:800;font-display:swap}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -36,11 +37,11 @@
 <div style="background:#f4efe2;overflow:hidden;min-height:100vh">
 
 <header style="position:sticky;top:0;z-index:50;padding:16px 20px 0">
-  <div style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
+  <div data-gut style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
     <a href="index.html" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="assets/lgo-mark.png" alt="LGO" style="height:36px;width:auto;display:block"><span style="font-weight:800;font-size:28px;letter-spacing:.06em;color:#141414">LGO</span></a>
     <nav data-r="nav" style="display:flex;gap:26px;margin-left:14px">
       <div data-dropdown style="position:relative">
-        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span style="font-size:10px;color:#8a8574">▾</span></a>
+        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span data-micro style="font-size:10px;color:#8a8574">▾</span></a>
         <div data-dropdown-panel style="position:absolute;top:100%;left:0;padding-top:16px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s;pointer-events:none">
           <div style="background:#fff;border:1px solid rgba(18,18,18,.06);border-radius:16px;box-shadow:0 16px 44px -20px rgba(18,18,18,.4);padding:8px;min-width:170px;display:flex;flex-direction:column;gap:2px">
             <a href="YouShop.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:15px">youShop</a>
@@ -71,10 +72,15 @@
     <a href="index.html#lending" data-i18n="nav.lending" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Lending</a>
     <a href="index.html#pricing" data-i18n="nav.pricing" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Pricing</a>
     <a href="Contact.dc.html" data-i18n="nav.contact" style="font-weight:700;font-size:17px;padding:12px 0">Contact</a>
+  
+    <div data-menu-extra>
+      <a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener"><span data-i18n="btn.getFree">Get youShop free</span>&nbsp;&nbsp;→</a>
+      <select data-lang-select aria-label="Language"><option value="en">English</option><option value="sg">Singlish</option><option value="si">සිංහල</option><option value="ta">தமிழ්</option></select>
+    </div>
   </nav>
 </header>
 
-<section style="max-width:980px;margin:0 auto;padding:56px 40px 20px;text-align:center">
+<section data-gut data-sec style="max-width:980px;margin:0 auto;padding:56px 40px 20px;text-align:center">
   <div style="display:inline-flex;align-items:center;gap:10px;color:#4f8a1e;font-weight:800;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px"><span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span>Contact us</div>
   <h1 data-h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:56px;line-height:1.04;letter-spacing:-.01em;margin-bottom:20px">Let's get you selling with <span style="font-style:italic;color:#4f8a1e">LGO.</span></h1>
   <p style="font-size:21px;line-height:1.5;color:#4c5666;max-width:560px;margin:0 auto 40px">Start free in minutes, or book a demo for multi-outlet and enterprise needs.</p>
@@ -84,11 +90,11 @@
   </div>
 </section>
 
-<section style="max-width:900px;margin:0 auto;padding:34px 40px 90px">
+<section data-gut data-sec style="max-width:900px;margin:0 auto;padding:34px 40px 90px">
 
   <!-- ===== SMB ===== -->
   <div data-form-panel="smb" style="display:block">
-    <form data-contact-form style="background:#fff;border-radius:26px;padding:52px;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
+    <form data-card data-contact-form style="background:#fff;border-radius:26px;padding:52px;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
       <h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:34px;margin-bottom:10px">Start your free account</h2>
       <p style="font-size:17px;color:#5b6472;margin-bottom:30px">Freemium plan · LKR 0 forever · no credit card required.</p>
 
@@ -111,23 +117,23 @@
         </div>
       </div>
 
-      <div data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+      <div data-stack data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">First name</span><input type="text" placeholder="Aisha" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Last name</span><input type="text" placeholder="Khan" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
       </div>
       <label style="display:block;margin-bottom:20px"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Business name</span><input type="text" placeholder="Aisha's Boutique" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
-      <div data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+      <div data-stack data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Email</span><input type="email" placeholder="you@business.com" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Mobile number</span><input type="tel" placeholder="+94 77 000 0000" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
       </div>
-      <div data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:26px">
+      <div data-stack data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:26px">
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Country</span><select style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none;cursor:pointer"><option>Sri Lanka</option><option>India</option><option>Maldives</option><option>Other</option></select></label>
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Number of shops / outlets</span><select style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none;cursor:pointer"><option>Just 1</option><option>2–5</option><option>6–20</option><option>20+</option></select></label>
       </div>
       <label style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;font-size:15px;color:#5b6472;line-height:1.5"><input type="checkbox" style="width:19px;height:19px;margin-top:1px;accent-color:#4f8a1e;flex-shrink:0">I agree to be contacted about my LGO account. No spam — you can unsubscribe any time.</label>
       <button type="submit" style="width:100%;border:0;background:#4f8a1e;color:#fff;border-radius:999px;padding:19px 0;font-family:inherit;font-weight:800;font-size:18px;cursor:pointer">Start free&nbsp;&nbsp;→</button>
     </form>
-    <div data-form-success style="display:none;background:#fff;border-radius:26px;padding:52px;text-align:center;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
+    <div data-card data-form-success style="display:none;background:#fff;border-radius:26px;padding:52px;text-align:center;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
       <div style="width:64px;height:64px;border-radius:50%;background:#eaf3dd;color:#4f8a1e;display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 22px">✓</div>
       <h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:30px;margin-bottom:12px">You're all set.</h2>
       <p style="font-size:17px;color:#5b6472;line-height:1.5;max-width:420px;margin:0 auto">A merchant agent will contact you shortly to finish setting up your free account. Or download youShop now and make your first sale.</p>
@@ -136,19 +142,19 @@
 
   <!-- ===== ENTERPRISE ===== -->
   <div data-form-panel="enterprise" style="display:none">
-    <form data-contact-form style="background:#fff;border-radius:26px;padding:52px;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
+    <form data-card data-contact-form style="background:#fff;border-radius:26px;padding:52px;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
       <h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:34px;margin-bottom:10px">Book an enterprise demo</h2>
       <p style="font-size:17px;color:#5b6472;margin-bottom:30px">We'll call within 1 business day to schedule.</p>
-      <div data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+      <div data-stack data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">First name</span><input type="text" placeholder="Rashid" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Last name</span><input type="text" placeholder="Mahmood" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
       </div>
-      <div data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+      <div data-stack data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Work email</span><input type="email" placeholder="you@company.com" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Phone</span><input type="tel" placeholder="+94 77 000 0000" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
       </div>
       <label style="display:block;margin-bottom:20px"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Company</span><input type="text" placeholder="Your organisation" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
-      <div data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+      <div data-stack data-2col style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Role</span><input type="text" placeholder="Head of Payments" style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none"></label>
         <label style="display:block"><span style="font-size:12px;letter-spacing:.08em;font-weight:800;color:#a29c8b;text-transform:uppercase;margin-bottom:8px;display:block">Monthly volume</span><select style="border:1.5px solid #d8d2c4;border-radius:12px;padding:14px 16px;font-family:inherit;font-size:16px;color:#141414;background:#fff;width:100%;outline:none;cursor:pointer"><option>&lt; LKR 300M / month</option><option>LKR 300M–1B / month</option><option>&gt; LKR 1B / month</option></select></label>
       </div>
@@ -156,7 +162,7 @@
       <label style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;font-size:15px;color:#5b6472;line-height:1.5"><input type="checkbox" style="width:19px;height:19px;margin-top:1px;accent-color:#4f8a1e;flex-shrink:0">I agree to be contacted about an LGO Enterprise demo. Your data stays with our sales &amp; solutions team.</label>
       <button type="submit" style="width:100%;border:0;background:#4f8a1e;color:#fff;border-radius:999px;padding:19px 0;font-family:inherit;font-weight:800;font-size:18px;cursor:pointer">Book demo&nbsp;&nbsp;→</button>
     </form>
-    <div data-form-success style="display:none;background:#fff;border-radius:26px;padding:52px;text-align:center;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
+    <div data-card data-form-success style="display:none;background:#fff;border-radius:26px;padding:52px;text-align:center;box-shadow:0 30px 70px -34px rgba(18,18,18,.4)">
       <div style="width:64px;height:64px;border-radius:50%;background:#eaf3dd;color:#4f8a1e;display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 22px">✓</div>
       <h2 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:30px;margin-bottom:12px">Request received.</h2>
       <p style="font-size:17px;color:#5b6472;line-height:1.5;max-width:420px;margin:0 auto">Our enterprise team will call you within one business day to schedule your demo.</p>
@@ -170,7 +176,7 @@
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:20px"><img src="assets/lgo-logo-full.png" alt="LGO Paytech" style="height:90px;width:auto;display:block"></div>
       <p style="font-size:16px;line-height:1.55;color:#5b6472;max-width:340px;margin-bottom:20px">A fintech taking Sri Lanka's micro-merchants from payment acceptance to credit. Built in Colombo by LGO Paytech, with LankaPay and a local lending partner.</p>
       <div style="font-size:15px;color:#5b6472;line-height:1.9;margin-bottom:20px"><a href="mailto:connect@lgotech.lk" style="font-weight:700">connect@lgotech.lk</a><br><a href="tel:+94772017950" style="font-weight:700">(+94) 77 201 7950</a></div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a><a href="Contact.dc.html" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Talk to sales</a></div>
+      <div data-btnrow style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a><a href="Contact.dc.html" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Talk to sales</a></div>
     </div>
     <div>
       <div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Products</div>

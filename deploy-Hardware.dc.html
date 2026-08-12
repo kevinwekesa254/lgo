@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
 <style>
   @font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Regular.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Medium.woff2') format('woff2');font-weight:500;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Bold.woff2') format('woff2');font-weight:700;font-display:swap}@font-face{font-family:'Saprona';src:url('assets/fonts/Saprona-Black.woff2') format('woff2');font-weight:800;font-display:swap}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -34,11 +35,11 @@
 <div style="background:#eef1f6">
 
 <header style="position:sticky;top:0;z-index:50;padding:16px 20px 0">
-  <div style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
+  <div data-gut style="max-width:1240px;margin:0 auto;padding:12px 16px 12px 26px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-radius:22px;box-shadow:0 16px 44px -20px rgba(18,18,18,.35),0 2px 6px -2px rgba(18,18,18,.06);border:1px solid rgba(255,255,255,.5)">
     <a href="https://lgo-2026-senfay-home-4b1c31c5-d8ff-4e71-8f52-f28f766-7avoqbzmz.vercel.app" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="assets/lgo-mark.png" alt="LGO" style="height:36px;width:auto;display:block"><span style="font-weight:800;font-size:28px;letter-spacing:.06em;color:#141414">LGO</span></a>
     <nav data-r="nav" style="display:flex;gap:30px;margin-left:20px">
       <div data-dropdown style="position:relative">
-        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span style="font-size:10px;color:#8a8574">▾</span></a>
+        <a href="index.html#products" data-i18n="nav.products" style="font-weight:600;font-size:16px;display:flex;align-items:center;gap:5px;cursor:pointer">Products<span data-micro style="font-size:10px;color:#8a8574">▾</span></a>
         <div data-dropdown-panel style="position:absolute;top:100%;left:0;padding-top:16px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s;pointer-events:none">
           <div style="background:#fff;border:1px solid rgba(18,18,18,.06);border-radius:16px;box-shadow:0 16px 44px -20px rgba(18,18,18,.4);padding:8px;min-width:170px;display:flex;flex-direction:column;gap:2px">
             <a href="https://lgo-youshop-4b1c31c5-youshop-pnqqhnama-kevinwekesa254s-projects.vercel.app" style="display:block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:15px">youShop</a>
@@ -68,10 +69,15 @@
     <a href="Solutions.dc.html" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Solutions</a>
     <a href="index.html#pricing" data-i18n="nav.pricing" style="font-weight:700;font-size:17px;padding:12px 0;border-bottom:1px solid rgba(18,18,18,.06)">Pricing</a>
     <a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" data-i18n="nav.contact" style="font-weight:700;font-size:17px;padding:12px 0">Contact</a>
+  
+    <div data-menu-extra>
+      <a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener"><span data-i18n="btn.getFree">Get youShop free</span>&nbsp;&nbsp;→</a>
+      <select data-lang-select aria-label="Language"><option value="en">English</option><option value="sg">Singlish</option><option value="si">සිංහල</option><option value="ta">தமிழ්</option></select>
+    </div>
   </nav>
 </header>
 
-<section data-r="hero" style="max-width:1280px;margin:0 auto;padding:64px 40px 30px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center">
+<section data-gut data-sec data-r="hero" style="max-width:1280px;margin:0 auto;padding:64px 40px 30px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center">
   <div>
     <a href="https://lgo-2026-senfay-home-4b1c31c5-d8ff-4e71-8f52-f28f766-7avoqbzmz.vercel.app" data-i18n="back.home" style="font-size:14px;font-weight:700;color:#7c869a;display:inline-block;margin-bottom:22px">← Back to home</a>
     <div style="display:flex;align-items:center;gap:11px;color:#4f8a1e;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px"><span style="width:9px;height:9px;border-radius:50%;background:#4f8a1e"></span><span data-i18n="hwp.eyebrow">LGO hardware</span></div>
@@ -84,7 +90,7 @@
   </div>
 </section>
 
-<section style="max-width:1280px;margin:0 auto;padding:30px 40px 20px">
+<section data-gut data-sec style="max-width:1280px;margin:0 auto;padding:30px 40px 20px">
   <div data-r="three" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
     <!-- Y1000 -->
     <div style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
@@ -94,7 +100,7 @@
         <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;margin-bottom:12px">Y1000</div>
         <p style="font-size:15px;line-height:1.55;color:#5b6472;margin-bottom:18px">All-in-one Android terminal that runs youShop with a built-in receipt printer, card reader, camera scanner and 4G.</p>
         <div style="display:flex;flex-direction:column;gap:7px;font-size:14px;color:#3a4457;margin-bottom:22px"><span>◆&nbsp; 5.5" touchscreen · Android</span><span>◆&nbsp; Built-in thermal printer</span><span>◆&nbsp; Card reader &amp; 4G / Wi-Fi</span></div>
-        <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">89,000 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
+        <div data-row data-btnrow style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">89,000 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
       </div>
     </div>
     <!-- Y4000 Tablet POS -->
@@ -105,7 +111,7 @@
         <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;margin-bottom:12px">Y4000</div>
         <p style="font-size:15px;line-height:1.55;color:#5b6472;margin-bottom:18px">A 10" tabletop Android POS built for table-side ordering — card, NFC and QR payments with a built-in barcode scanner and external receipt printer.</p>
         <div style="display:flex;flex-direction:column;gap:7px;font-size:14px;color:#3a4457;margin-bottom:22px"><span>◆&nbsp; Display · 10" HD+ touch</span><span>◆&nbsp; Card reader · Built-in NFC + EMV</span><span>◆&nbsp; Barcode · Built-in scanner</span><span>◆&nbsp; Printer · 80 mm external</span><span>◆&nbsp; Best for · Table-side ordering</span></div>
-        <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">89,700 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
+        <div data-row data-btnrow style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">89,700 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
       </div>
     </div>
     <!-- Y7000 kiosk -->
@@ -116,7 +122,7 @@
         <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;margin-bottom:12px">Y7000</div>
         <p style="font-size:15px;line-height:1.55;color:#5b6472;margin-bottom:18px">A floor-standing self-ordering kiosk for restaurants and quick-service counters. Customers browse, order and pay themselves.</p>
         <div style="display:flex;flex-direction:column;gap:7px;font-size:14px;color:#3a4457;margin-bottom:22px"><span>◆&nbsp; Large HD touchscreen</span><span>◆&nbsp; Built-in printer &amp; scanner</span><span>◆&nbsp; LankaQR &amp; Visa payments</span></div>
-        <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">320,000 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
+        <div data-row data-btnrow style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">320,000 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
       </div>
     </div>
     <!-- Y10 SoundBox -->
@@ -127,7 +133,7 @@
         <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;margin-bottom:12px">Y10</div>
         <p style="font-size:15px;line-height:1.55;color:#5b6472;margin-bottom:18px">Desktop QR display that shows the amount due and announces every payment out loud, in Sinhala or Tamil.</p>
         <div style="display:flex;flex-direction:column;gap:7px;font-size:14px;color:#3a4457;margin-bottom:22px"><span>◆&nbsp; On-screen QR to pay</span><span>◆&nbsp; Voice confirmation</span><span>◆&nbsp; Perfect for busy counters</span></div>
-        <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">18,500 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
+        <div data-row data-btnrow style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">18,500 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
       </div>
     </div>
     <!-- Receipt 58 -->
@@ -138,23 +144,23 @@
         <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;margin-bottom:12px">Receipt 58</div>
         <p style="font-size:15px;line-height:1.55;color:#5b6472;margin-bottom:18px">58 mm Bluetooth thermal printer. Pairs with youShop in one tap and prints crisp receipts and daily Z-reports.</p>
         <div style="display:flex;flex-direction:column;gap:7px;font-size:14px;color:#3a4457;margin-bottom:22px"><span>◆&nbsp; 58 mm thermal paper</span><span>◆&nbsp; One-tap Bluetooth pairing</span><span>◆&nbsp; Rechargeable battery</span></div>
-        <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">22,000 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
+        <div data-row data-btnrow style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Saprona',sans-serif;font-weight:800;font-size:22px">22,000 <span style="font-size:12px;color:#7c869a;font-family:Mulish">LKR</span></span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#141414;color:#fff;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Talk to sales</a></div>
       </div>
     </div>
     <!-- KDS coming soon -->
     <div style="background:#f6f8fc;border:1px solid #e0e5ee;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;position:relative">
-      <span data-i18n="hw.comingSoon" style="position:absolute;top:16px;left:16px;z-index:2;background:#141414;color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em;padding:6px 12px;border-radius:999px">Coming soon</span>
+      <span data-micro data-i18n="hw.comingSoon" style="position:absolute;top:16px;left:16px;z-index:2;background:#141414;color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em;padding:6px 12px;border-radius:999px">Coming soon</span>
       <div style="height:240px;background:#fff;display:flex;align-items:center;justify-content:center;padding:20px"><img src="assets/hw-kds.png" alt="Kitchen Display System" style="max-height:65%;max-width:65%;object-fit:contain;opacity:.92"></div>
       <div style="padding:28px 26px;flex:1;display:flex;flex-direction:column">
         <div style="font-size:12px;font-weight:800;letter-spacing:.09em;color:#4f8a1e;margin-bottom:8px">KITCHEN DISPLAY SYSTEM</div>
         <div style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;margin-bottom:12px">KDS Tablet</div>
         <p style="font-size:15px;line-height:1.55;color:#5b6472;margin-bottom:18px">Wall-mounted kitchen display for youResto and youQR. Orders appear the second they land — no more shouting across the kitchen.</p>
         <div style="display:flex;flex-direction:column;gap:7px;font-size:14px;color:#3a4457;margin-bottom:22px"><span>◆&nbsp; Live ticket board by table</span><span>◆&nbsp; Colour-coded prep timers</span><span>◆&nbsp; Syncs with youResto</span></div>
-        <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span data-i18n="hw.comingSoon" style="font-family:'Saprona',sans-serif;font-weight:800;font-size:20px;color:#7c869a">Coming soon</span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="border:1.5px solid #ccd4e2;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Notify me</a></div>
+        <div data-row data-btnrow style="margin-top:auto;display:flex;align-items:center;justify-content:space-between"><span data-i18n="hw.comingSoon" style="font-family:'Saprona',sans-serif;font-weight:800;font-size:20px;color:#7c869a">Coming soon</span><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="border:1.5px solid #ccd4e2;border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px">Notify me</a></div>
       </div>
     </div>
     <!-- pair band -->
-    <div style="background:#141414;color:#fff;border-radius:22px;padding:32px;display:flex;flex-direction:column;justify-content:center">
+    <div data-card style="background:#141414;color:#fff;border-radius:22px;padding:32px;display:flex;flex-direction:column;justify-content:center">
       <div style="font-size:12px;font-weight:800;letter-spacing:.09em;color:#8fb51f;margin-bottom:10px">PAIRS IN SECONDS</div>
       <h3 style="font-family:'Saprona',sans-serif;font-weight:800;font-size:28px;line-height:1.1;margin-bottom:12px">Every device works with the youShop and youResto apps</h3>
       <p style="font-size:16px;line-height:1.55;color:rgba(255,255,255,.65);margin-bottom:20px">Buy only what you need, when you need it. Add a printer today, a kiosk next year — it all connects to the same account.</p>
@@ -169,7 +175,7 @@
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:20px"><img src="assets/lgo-logo-full.png" alt="LGO Paytech" style="height:90px;width:auto;display:block"></div>
       <p data-i18n="ft.desc" style="font-size:16px;line-height:1.55;color:#5b6472;max-width:340px;margin-bottom:20px">Software and credit for Sri Lanka's micro-merchants. Built in Colombo by LGO Paytech, in partnership with LankaPay and Sampath Bank.</p>
       <div style="font-size:15px;color:#5b6472;line-height:1.9;margin-bottom:20px"><a href="mailto:connect@lgotech.lk" style="font-weight:700">connect@lgotech.lk</a><br><a href="tel:+94772017950" style="font-weight:700">(+94) 77 201 7950</a></div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Talk to sales</a></div>
+      <div data-btnrow style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Play Store</a><a href="https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app" style="background:#fff;border:1px solid #e0d8c6;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px">Talk to sales</a></div>
     </div>
     <div><div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Products</div><div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="https://lgo-youshop-4b1c31c5-youshop-pnqqhnama-kevinwekesa254s-projects.vercel.app">youShop</a><a href="https://lgo-youresto-4b1c31c5-youresto-1sub1o9k8.vercel.app">youResto</a><a href="https://lgo-youqr-4b1c31c5-youqr-qnrlxmxvu-kevinwekesa254s-projects.vercel.app">youQR</a><a href="https://lgo-hardware-4b1c31c5-hardware-iwik57ph0.vercel.app">Hardware</a></div></div>
     <div><div style="font-size:13px;letter-spacing:.12em;font-weight:800;color:#7c869a;text-transform:uppercase;margin-bottom:20px">Merchants</div><div style="display:flex;flex-direction:column;gap:14px;font-size:16px"><a href="index.html#pricing">Pricing</a><a href="index.html#how">How it works</a><a href="index.html#support">Help centre</a><a href="index.html#support">Agent locator</a></div></div>
