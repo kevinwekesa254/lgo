@@ -345,6 +345,16 @@
   /* 320-359px (iPhone SE): 274 inside 280. */
   @media (max-width: 359px) { [data-phone] { --ph: .70; } }
 
+  /* The container is 392px wide but the device rendered inside it is only
+     340px, and it sits flush left. On desktop the floating cards hung off
+     both sides so the imbalance was invisible; once they are pulled inside
+     it reads as ~21px of space on the left against ~67px on the right.
+     Auto margins on the component root centre the device in its box. */
+  [data-phone] > div > .sc-host > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   /* Cards that hung off the sides now overlap the device edges — reads as a
      deliberate layered composition rather than something falling off-screen. */
   [data-float="left"]  { left:  4px !important; right: auto !important; }
@@ -610,7 +620,11 @@
 
   [data-btnrow] {
     flex-direction: column !important;
-    align-items: stretch !important;
+    /* NOT stretch: in a column flex box the cross axis is horizontal, so
+       stretch blows any non-anchor child (a logo <img> with height:60px;
+       width:auto) out to the full container width. The anchors get their
+       full width explicitly below instead. */
+    align-items: flex-start !important;
     gap: 10px !important;
     width: 100% !important;
   }

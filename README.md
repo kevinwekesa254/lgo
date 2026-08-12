@@ -109,8 +109,25 @@ does not portably support.
 ## Languages
 
 The language switcher offers English, Singlish, Sinhala (සිංහල) and Tamil (தமிழ்).
-Translated strings live in `senfay-common.js` and are bound to markup through
-`data-i18n="..."` attributes.
+Translated strings live in the dictionary in `senfay-common.js` and are bound to the
+markup through `data-i18n="..."` attributes (`data-i18n-html` where the string carries
+inline markup). The switcher is wired with `querySelectorAll`, so the header and menu
+copies stay in sync automatically.
+
+**Coverage is currently 14%** — 154 of 1,097 visible strings. The dictionary holds 78
+keys with genuine Sinhala/Tamil/Singlish translations; everything else on the page has
+no translation defined at all, which is why switching language leaves most of the copy
+in English. This is a content gap, not a wiring bug.
+
+`i18n/untranslated-strings.csv` lists the 798 strings that still need translating
+(~4,500 English words), one row per string with empty `singlish` / `sinhala` / `tamil`
+columns to fill in. Once it comes back filled, the strings go into the dictionary in
+`senfay-common.js` and the matching elements get `data-i18n` attributes.
+
+Thirteen dictionary keys no longer match any text on the site — the English copy was
+rewritten after they were authored (`ys.eyebrow` is "youShop · Retail POS" but the page
+now reads "Unified retail platform"). They are left unwired deliberately: attaching them
+would silently change the English copy.
 
 ## Local preview
 

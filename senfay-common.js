@@ -9,7 +9,7 @@
       WA = "https://lgo-contact-4b1c31c5-contact-34p5ciqji-kevinwekesa254s-projects.vercel.app";
     }
   } catch (e) {}
-  var PLAY = "https://play.google.com/store/apps/details?id=com.youcloud.youshop&hl=en";
+  var PLAY = "https://play.google.com/store/apps/details?id=com.youcloudpay.youshop&hl=en_US";
   var EMAIL = "connect@lgotech.lk";
 
   // ---- UI string dictionary. Base = en. Fallback order: lang -> en. ----
