@@ -2,7 +2,7 @@
    Loaded in <helmet>; call window.LGO.init(rootEl) from componentDidMount.
    Languages: en (default), sg (Singlish), si (Sinhala), ta (Tamil). */
 (function () {
-  var PHONE = "+94 77 201 7950";
+  var PHONE = "+94 70 233 8866";
   var WA = "Contact.dc.html";
   try {
     if (location.hostname.indexOf("vercel.app") !== -1) {
