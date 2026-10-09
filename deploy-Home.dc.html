@@ -25,7 +25,7 @@
   a{color:#141414;text-decoration:none}
   a:hover{color:#4f8a1e}
   ::selection{background:#4f8a1e;color:#fff}
-  @keyframes sfmarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes lgomarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   [data-lang-btn]{border:0;padding:8px 12px;cursor:pointer;background:transparent;font-family:inherit;font-weight:800;font-size:13px;color:#5b6472;transition:background .15s,color .15s}
   @media(max-width:1024px){[data-r="nav"]{display:none!important}[data-hide-sm]{display:none!important}[data-menu-btn]{display:flex!important}}
   @media(max-width:960px){[data-r="hero"]{grid-template-columns:1fr!important}[data-r="three"]{grid-template-columns:1fr!important}[data-r="four"]{grid-template-columns:1fr 1fr!important}}
@@ -34,7 +34,7 @@
   @media(max-width:700px){header{padding:10px 12px 0!important}[data-menu-panel]{max-height:70vh;overflow-y:auto;-webkit-overflow-scrolling:touch}}
   [data-menu-panel] a{min-height:44px;display:flex;align-items:center}
 </style>
-<script src="senfay-common.js"></script>
+<script src="lgo-common.js"></script>
 </helmet>
 <div style="background:#eef1f6">
 
@@ -126,7 +126,7 @@
     <span data-i18n="strip.powered" style="font-size:13px;letter-spacing:.14em;font-weight:800;color:#7c869a;text-transform:uppercase">Payments &amp; credit powered by</span>
   </div>
   <div style="position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
-    <div data-marquee style="display:flex;width:max-content;gap:22px;animation:sfmarquee 40s linear infinite">
+    <div data-marquee style="display:flex;width:max-content;gap:22px;animation:lgomarquee 40s linear infinite">
       <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-lankaqr.png" alt="LankaQR" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
       <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-visa.png" alt="Visa" style="max-height:48px;max-width:100%;width:auto;object-fit:contain;display:block"></div>
       <div style="height:88px;width:196px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e0e5ee;border-radius:18px;padding:14px 24px;flex-shrink:0"><img src="assets/rail-mastercard.png" alt="Mastercard" style="max-height:58px;max-width:100%;width:auto;object-fit:contain;display:block"></div>

@@ -19,7 +19,7 @@ scripts and images directly from disk. Open any `.dc.html` file in a browser to 
 | `Contact.dc.html` | Contact |
 | `Terms.dc.html` | Terms of service |
 | `Privacy.dc.html` | Privacy policy |
-| `Senfay.dc.html` | Long-form single-file build of the site |
+| `LGO-Full.dc.html` | Long-form single-file build of the site |
 | `PhoneScreen.dc.html` | Standalone phone-mockup component |
 
 ### `deploy-*` variants
@@ -33,13 +33,13 @@ because each page is deployed as its own Vercel project.
   when a deployment URL changes.
 
 Keep the two in sync: a content change made to `YouShop.dc.html` also needs to land in
-`deploy-YouShop.dc.html`. `Solutions`, `Senfay` and `PhoneScreen` have no `deploy-` variant.
+`deploy-YouShop.dc.html`. `Solutions`, `LGO-Full` and `PhoneScreen` have no `deploy-` variant.
 
 ## Shared files
 
 | File | Purpose |
 | --- | --- |
-| `senfay-common.js` | Shared header/footer behaviour, i18n strings, language switcher |
+| `lgo-common.js` | Shared header/footer behaviour, i18n strings, language switcher |
 | `image-slot.js` | Image placeholder / slot helper used while laying pages out |
 | `support.js` | Runtime shim loaded first by every page |
 | `mobile.css` | Mobile layout layer — see below |
@@ -109,7 +109,7 @@ does not portably support.
 ## Languages
 
 The language switcher offers English, Singlish, Sinhala (සිංහල) and Tamil (தமிழ்).
-Translated strings live in the dictionary in `senfay-common.js` and are bound to the
+Translated strings live in the dictionary in `lgo-common.js` and are bound to the
 markup through `data-i18n="..."` attributes (`data-i18n-html` where the string carries
 inline markup). The switcher is wired with `querySelectorAll`, so the header and menu
 copies stay in sync automatically.
@@ -122,7 +122,7 @@ in English. This is a content gap, not a wiring bug.
 `i18n/untranslated-strings.csv` lists the 798 strings that still need translating
 (~4,500 English words), one row per string with empty `singlish` / `sinhala` / `tamil`
 columns to fill in. Once it comes back filled, the strings go into the dictionary in
-`senfay-common.js` and the matching elements get `data-i18n` attributes.
+`lgo-common.js` and the matching elements get `data-i18n` attributes.
 
 Thirteen dictionary keys no longer match any text on the site — the English copy was
 rewritten after they were authored (`ys.eyebrow` is "youShop · Retail POS" but the page
